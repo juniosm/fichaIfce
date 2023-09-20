@@ -5,12 +5,28 @@
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vite App</title>
+  <title>Ficha Ifce</title>
 </head>
 
 <body>
-  <div id="app"></div>
-  <script type="module" src="src/main.js"></script>
+  <div id="app">
+    <form class="form" id="form">
+      <label for="nome">Nome:</label><br>
+      <input type="text" id="nome" name="nome" required><br>
+      <label for="curso">Curso:</label><br>
+      <input type="text" id="curso" name="curso" required><br>
+      <label for="data">Data por extenso:</label><br>
+      <input type="text" id="data" name="data" required><br>
+      <br>
+      <button id="button">Enviar</button>
+    </form>
+
+    <a href="./ficha.html">ir</a>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" integrity="sha512-qZvrmS2ekKPF2mSznTQsxqPgnpkI4DNTlrdUmTzrDgektczlKNRRhy5X5AAOnx5S09ydFYWWNSfcEqDTTHgtNA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="src/main.js"></script>
+
 </body>
 
 </html>

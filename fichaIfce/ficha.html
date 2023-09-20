@@ -1,139 +1,141 @@
 <html>
-    <body>
-        <script>
-            //document.getElementById('ficha').innerHTML = ''
-            document.getElementById('ficha-disciplinas')
-            resp = []
-            function secretaria(){
-                resp+='Secretaria'
-                console.log(resp)
-                document.getElementById('Setores').style = "display:none"
-            }
-            function pedagogico(){
-                resp+='Pedagógico'
-                console.log(resp)
-                document.getElementById('Setores').style = "display:none"
-            }
-            function coordenacao(){
-                resp+='Coordenação'
-                console.log(resp)
-                document.getElementById('Setores').style = "display:none"
-            }
-            function aparecer_matricula(){
-                    document.getElementById('ficha-matricula').style = "display: block"
-                    document.getElementById('ficha-disciplinas').style="display:none"
-                    document.getElementById('ficha-editais').style="display:none"
-                    document.getElementById('ficha-outros').style="display:none"
-            }
-            function aparecer_disciplinas(){
-                    document.getElementById('ficha-disciplinas').style = "display: block"
-                    document.getElementById('ficha-matricula').style="display:none"
-                    document.getElementById('ficha-editais').style="display:none"
-                    document.getElementById('ficha-outros').style="display:none"
-            }
-            function aparecer_editais(){
-                    document.getElementById('ficha-editais').style = "display: block"
-                    document.getElementById('ficha-disciplinas').style="display:none"
-                    document.getElementById('ficha-matricula').style="display:none"
-                    document.getElementById('ficha-outros').style="display:none"
-            }
-            function aparecer_outros(){
-                    document.getElementById('ficha-outros').style = "display: block"
-                    document.getElementById('ficha-disciplinas').style="display:none"
-                    document.getElementById('ficha-editais').style="display:none"
-                    document.getElementById('ficha-matricula').style="display:none"
-            }
-        </script>
-        <div>
-            <h3>Setores</h3>
-            <div id="Setores">
-                <button onclick="secretaria()">Secretaria</button>
-                <button onclick="pedagogico()">Pedagogico</button>
-                <button onclick="coordenacao()">Coordenação</button>
-            </div>
-            <div id="ficha" style="display: inline-block;">
 
-                <div>
-                    <button id="btn_matricula" onclick="aparecer_matricula()">Matrícula</button>
-                    <div id="ficha-matricula">
-                        <h2>Dados pessoais</h2>
-                        <label for="">
-                            Nome:
-                            <input type="text" placeholder="Nome">
-                        </label><br>
-                        <label for="">
-                            Matrícula:
-                            <input type="text" name="" id="" placeholder="Matrícula">
-                        </label><br>
-                        <label for="">
-                            Data de nascimento:
-                            <input type="date" name="" id="">
-                        </label><br>
-                        <label for="">
-                            Email:
-                            <input type="text" name="" id="">
-                        </label><br>
-                        <h2>Requerimento</h2>
-                        <label for="">Matrícula com vínculo institucional:</label><br>
-                        <label for="">Trancamento de Disciplinas:</label><br>
-                        <label for="">Reabertura de curso</label><br>
-                        <label for="">Matrícula com vínculo institucional</label><br>
-                        <label for="">Matrícula especial</label><br>
-                        <label for="">Trancamento de matrícula de curso</label><br>
-                        <label for="">Reingresso do curso</label><br>
-                    </div>
-                </div>
-
-                <div>
-                    <h2>Disciplinas</h2>
-                    <button id ="btn_disciplinas" onclick="aparecer_disciplinas()">Disciplinas</button>
-                    <div id="ficha-disciplinas">
-                        <label for="">Reajuste de disciplinas(inclusão)<input type="checkbox" name="matricula" id=""> <input type="text"></label><br>
-                        <label for="">Reajuste de disciplinas(exclusão)<input type="checkbox" name="matricula" id=""> <input type="text"></label><br>
-                        <label for="">Aproveitamento de disciplinas<input type="checkbox" name="matricula" id=""> <input type="text"></label><br>
-                        <label for="">Validação de disciplinas <input type="checkbox" name="matricula" id=""> <input type="text"></label><br>
-                        <label for="">Justificativa de faltas de disciplinas <input type="checkbox" name="matricula" id=""> <input type="text" placeholder="Disciplina"> <input type="text" placeholder="Justificativa"></label><br>
-                        <label for="">Revisão de notas </label><br>
-                    </div>
-                </div>
-
-                <div>
-                    <h2>Editais</h2>
-                    <button id="btn_editais" onclick="aparecer_editais()">Editais</button>
-                    <div id="ficha-editais">
-                        <label for="">Edital Transferidos e diplomados:
-                            <input type="radio" name="trans_diplo" id="" value="1">Interna</input>
-                            <input type="radio" name="trans_diplo" id="" value="2">Externa</input> 
-                            <input type="radio" name="trans_diplo" id="" value="3">Diplomados</input>
-                            <input type="text" placeholder="Curso">
-                        </label><br>
-                        <label for="">Edital Processo seletivo: 
-                            <input type="text" name="" id="" placeholder="Curso">
-                            <input type="radio" name="seletivo" value="1">Integrado</input>
-                            <input type="radio" name="seletivo" value="2">Subsequente</input>
-                        </label><br>
-                        <label for="">Edital de monitoria: 
-                            <input type="text" placeholder="Curso">
-                            <input type="text" placeholder="Disciplina">
-                        </label><br>
-                    </div>
-                </div>
-
-                <div>
-                    <button id="btn_outros" onclick="aparecer_outros()">Outros</button>
-                    <div id="ficha-outros">
-                        <label for="">Regime de exercício domiciliar: <input type="text" name="" id=""></label><br>
-                        <label for="">Afastamento para Intercâmbio Nacional ou Internacional: <input type="text" name="" id=""></label><br>
-                        <label for="">Colação de grau especial: <input type="text" name="" id=""></label><br>
-                        <label for="">Certificação ou declaração de proficiência do ENEM: <input type="text" name="" id=""></label><br>
-                        <label for="">Diploma ou certificação: <input type="text" name="" id=""></label><br>
-                        <label for="">Outro: <input type="text" name="" id=""></label><br>
-                    </div>
-                </div>
-
-            </div>
-            
+<body>
+    <script>
+        //document.getElementById('ficha').innerHTML = ''
+        document.getElementById('ficha-disciplinas')
+        resp = []
+        function secretaria() {
+            resp += 'Secretaria'
+            console.log(resp)
+            document.getElementById('Setores').style = "display:none"
+        }
+        function pedagogico() {
+            resp += 'Pedagógico'
+            console.log(resp)
+            document.getElementById('Setores').style = "display:none"
+        }
+        function coordenacao() {
+            resp += 'Coordenação'
+            console.log(resp)
+            document.getElementById('Setores').style = "display:none"
+        }
+        // function aparecer_matricula(){
+        //         document.getElementById('ficha-matricula').style = "display: block"
+        //         document.getElementById('ficha-disciplinas').style="display:none"
+        //         document.getElementById('ficha-editais').style="display:none"
+        //         document.getElementById('ficha-outros').style="display:none"
+        // }
+        function aparecer_disciplinas() {
+            document.getElementById('ficha-disciplinas').style = "display: block"
+            // document.getElementById('ficha-matricula').style="display:none"
+            document.getElementById('ficha-editais').style = "display:none"
+            document.getElementById('ficha-outros').style = "display:none"
+        }
+        function aparecer_editais() {
+            document.getElementById('ficha-editais').style = "display: block"
+            document.getElementById('ficha-disciplinas').style = "display:none"
+            // document.getElementById('ficha-matricula').style="display:none"
+            document.getElementById('ficha-outros').style = "display:none"
+        }
+        function aparecer_outros() {
+            document.getElementById('ficha-outros').style = "display: block"
+            document.getElementById('ficha-disciplinas').style = "display:none"
+            document.getElementById('ficha-editais').style = "display:none"
+            // document.getElementById('ficha-matricula').style="display:none"
+        }
+    </script>
+    <div>
+        <h3>Setores</h3>
+        <div id="Setores">
+            <button onclick="secretaria()">Secretaria</button>
+            <button onclick="pedagogico()">Pedagogico</button>
+            <button onclick="coordenacao()">Coordenação</button>
         </div>
-        
-    </body>
+        <div id="ficha" style="display: inline-block;">
+
+            <div>
+                <!-- <button id="btn_matricula" onclick="aparecer_matricula()">Matrícula</button> -->
+                <div id="ficha-matricula">
+                    <h2>Dados pessoais</h2>
+                    <label for="">
+                        Nome:
+                        <input type="text" placeholder="Nome">
+                    </label><br>
+                    <label for="">
+                        Matrícula:
+                        <input type="text" name="" id="" placeholder="Matrícula">
+                    </label><br>
+                    <label for="">
+                        Data de nascimento:
+                        <input type="date" name="" id="">
+                    </label><br>
+                    <label for="">
+                        Email:
+                        <input type="text" name="" id="">
+                    </label><br>
+                    <h2>Requerimento</h2>
+                    <label for="">Matrícula com vínculo institucional:</label><br>
+                    <label for="">Trancamento de Disciplinas:</label><br>
+                    <label for="">Reabertura de curso</label><br>
+                    <label for="">Matrícula com vínculo institucional</label><br>
+                    <label for="">Matrícula especial</label><br>
+                    <label for="">Trancamento de matrícula de curso</label><br>
+                    <label for="">Reingresso do curso</label><br>
+                </div>
+            </div>
+
+            <div>
+                <h2>Disciplinas</h2>
+                <button id="btn_disciplinas" onclick="aparecer_disciplinas()">Disciplinas</button>
+                <div id="ficha-disciplinas">
+                    <label for="">Reajuste de disciplinas(inclusão)<input type="checkbox" name="matricula" id=""> <input type="text"></label><br>
+                    <label for="">Reajuste de disciplinas(exclusão)<input type="checkbox" name="matricula" id=""> <input type="text"></label><br>
+                    <label for="">Aproveitamento de disciplinas<input type="checkbox" name="matricula" id=""> <input type="text"></label><br>
+                    <label for="">Validação de disciplinas <input type="checkbox" name="matricula" id=""> <input type="text"></label><br>
+                    <label for="">Justificativa de faltas de disciplinas <input type="checkbox" name="matricula" id=""> <input type="text" placeholder="Disciplina"> <input type="text" placeholder="Justificativa"></label><br>
+                    <label for="">Revisão de notas </label><br>
+                </div>
+            </div>
+
+            <div>
+                <h2>Editais</h2>
+                <button id="btn_editais" onclick="aparecer_editais()">Editais</button>
+                <div id="ficha-editais">
+                    <label for="">Edital Transferidos e diplomados:
+                        <input type="radio" name="trans_diplo" id="" value="1">Interna</input>
+                        <input type="radio" name="trans_diplo" id="" value="2">Externa</input>
+                        <input type="radio" name="trans_diplo" id="" value="3">Diplomados</input>
+                        <input type="text" placeholder="Curso">
+                    </label><br>
+                    <label for="">Edital Processo seletivo:
+                        <input type="text" name="" id="" placeholder="Curso">
+                        <input type="radio" name="seletivo" value="1">Integrado</input>
+                        <input type="radio" name="seletivo" value="2">Subsequente</input>
+                    </label><br>
+                    <label for="">Edital de monitoria:
+                        <input type="text" placeholder="Curso">
+                        <input type="text" placeholder="Disciplina">
+                    </label><br>
+                </div>
+            </div>
+
+            <div>
+                <button id="btn_outros" onclick="aparecer_outros()">Outros</button>
+                <div id="ficha-outros">
+                    <label for="">Regime de exercício domiciliar: <input type="text" name="" id=""></label><br>
+                    <label for="">Afastamento para Intercâmbio Nacional ou Internacional: <input type="text" name="" id=""></label><br>
+                    <label for="">Colação de grau especial: <input type="text" name="" id=""></label><br>
+                    <label for="">Certificação ou declaração de proficiência do ENEM: <input type="text" name="" id=""></label><br>
+                    <label for="">Diploma ou certificação: <input type="text" name="" id=""></label><br>
+                    <label for="">Outro: <input type="text" name="" id=""></label><br>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
 </html>
