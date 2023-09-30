@@ -1,0 +1,35 @@
+.check-grid {
+  margin-top: 40px;
+}
+
+.campos,
+.check-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.campos .col-2,
+.check-grid .col-2 {
+  grid-column: span 2;
+}
+
+.campos div,
+.check-grid li {
+  margin: 10px 40px;
+}
+
+label {
+  font-size: 0.875rem;
+}
+
+input {
+  border: none;
+  box-sizing: border-box;
+  padding: 0.875rem 0.5rem;
+}
+
+input[type="text"] {
+  width: 100%;
+  border-bottom: 1px solid #e2e4e5;
+  box-sizing: border-box;
+}

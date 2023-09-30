@@ -1,32 +1,84 @@
 <!doctype html>
 <html lang="en">
 
+
 <head>
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ficha Ifce</title>
+
 </head>
 
-<body>
-  <div id="app">
-    <form class="form" id="form">
-      <label for="nome">Nome:</label><br>
-      <input type="text" id="nome" name="nome" required><br>
-      <label for="curso">Curso:</label><br>
-      <input type="text" id="curso" name="curso" required><br>
-      <label for="data">Data por extenso:</label><br>
-      <input type="text" id="data" name="data" required><br>
-      <br>
-      <button id="button">Enviar</button>
-    </form>
+<body id="ID-pdf">
 
-    <a href="./ficha.html">ir</a>
-  </div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" integrity="sha512-qZvrmS2ekKPF2mSznTQsxqPgnpkI4DNTlrdUmTzrDgektczlKNRRhy5X5AAOnx5S09ydFYWWNSfcEqDTTHgtNA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="src/main.js"></script>
+  
+  <section class="campos">
+    <div>
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome">
+    </div>
+    <div>
+      <label for="cpf">CPF:</label>
+      <input type="text" id="cpf">
+    </div>
+    <div>
+      <label for="matricula">Matricula:</label>
+      <input type="text" id="matricula">
+    </div>
+    <div>
+      <label for="curso">Curso:</label>
+      <input type="text" id="curso">
+    </div>
+    <div>
+      <label for="turma">Turma:</label>
+      <input type="text" id="turma">
+    </div>
+    <div>
+      <label for="telefone">Telefone:</label>
+      <input type="text" id="telefone">
+    </div>
+    <div class="col-2">
+      <label for="email">Email:</label>
+      <input type="text" id="email">
+    </div>
+    <ul class="col-2 check-grid">
+      <li>
+        <input type="checkbox" id="checker" for="name2"><label>Matrícula com vínculo institucional</label></input>
+        <input type="text" id="name2" name="name2" />
+      </li>
+      <li>
+        <input type="checkbox" id="checker" for="name2"><label>Trancamento de Disciplinas</label></input>
+        <input type="text" id="name2" name="name2" />
+      </li>
+      <li>
+        <input type="checkbox" id="checker" for="name2"><label>Reabertura de curso</label></input>
+        <input type="text" id="name2" name="name2" />
+      </li>
+      <li>
+        <input type="checkbox" id="checker" for="name2"><label>Matrícula especial</label></input>
+        <input type="text" id="name2" name="name2" />
+      </li>
+      <li>
+        <input type="checkbox" id="checker" for="name2"><label>Matrícula especial</label></input>
+        <input type="text" id="name2" name="name2" />
+      <li>
+        <input type="checkbox" id="checker" for="name2"><label>Trancamento de matrícula de curso</label></input>
+        <input type="text" id="name2" name="name2" />
+      </li>
+      <li class="col-2">
+        <input type="checkbox" id="checker" for="name2"><label>Reingresso do curso</label></input>
+        <input type="text" id="name2" name="name2" />
+      </li>
+    </ul>
+  </section>
+  <button class="button" id="button">enviar</button>
+  <a href="./html/cadastro.html">ir</a>
+
+  
+  <script type="module" src="src/main.js"></script>
 
 </body>
+</div>
 
 </html>
