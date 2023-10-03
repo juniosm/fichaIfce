@@ -18,6 +18,7 @@ body {
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 ul {
@@ -33,32 +34,50 @@ header {
   background-color: #32a041;
   padding: 20px;
   margin-bottom: 20px;
+  text-align: end;
 }
 
-.home {
-  display: flex;
-  gap: 20px;
+ul li a {
+  font-weight: 600;
 }
 
-.content-page {
-  margin-left: 250px;
-
-  width: calc(100% - 250px);
-  border-radius: 10px;
-  background: #ffffff;
-  margin: 0 40px;
+.button {
+  padding: 0 2rem;
+  height: 3rem;
+  border: none;
+  background: #32a041;
+  color: #ffffff;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  letter-spacing: 1px;
+  font-family: inherit;
+  box-sizing: border-box;
 }
 
-.content-page .border {
-  border-radius: 10px;
-  padding: 2rem;
-  border: 2px solid #e2e4e5;
+.button:hover::before {
+  transform: scaleX(1.1);
 }
 
-.menu-left {
+.button span {
+  position: relative;
+  z-index: 10;
+}
+
+.button::before {
+  content: "";
   position: absolute;
-  z-index: 100;
-  width: 250px;
-  background: #ffffff;
-  height: 100%;
+  top: 0;
+  right: 0;
+  transform: scaleX(0);
+  width: 100%;
+  height: inherit;
+  border-radius: 0 3rem 3rem 0;
+  transition: all 0.8s ease;
+  background: #184603;
+  transform-origin: 0 50%;
 }

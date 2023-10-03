@@ -6,7 +6,11 @@
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="./src/css/style.css">
-  <title>Ficha Ifce</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="./public/img/icons/favicosn.svg">
+
+  <title>Login</title>
 </head>
 
 <body>
@@ -14,15 +18,64 @@
   <main>
     <section>
       <div class="grid-entrada">
-        <div class="form-entrada" id="entradaLogin"></div>
-        <div class="form-entrada" id="entradaCadastro"></div>
+        <form class="form-entrada">
+          <div class="campo-entrada grid-campo active " id="entradaLogin">
+            <h1 class="col-2">Login</h1>
+            <div class="col-2">
+              <input type="email" id="email"></input>
+              <label for="email">Email</label>
+            </div>
+            <div class="col-2">
+              <input type="password" id="password"></input>
+              <label for="password">Senha</label>
+            </div>
+            <button class="button col-2"><span>Entrar</span></button>
 
-        <div class="ilustração">
-          <div>
-            <img src="" alt="">
-            <h3>Ficha Ifce</h3>
           </div>
-          <div><img src="./public/img/imagem-entrada.png" alt="ilustração de dados pessoal"></div>
+          <div class="campo-entrada grid-campo " id="entradaCadastro">
+
+            <h1 class="col-2">Cadastro</h1>
+
+            <div>
+              <input type="text" id="nome">
+              <label for="nome">Nome</label>
+            </div>
+            <div>
+              <input type="cpf" id="cpf">
+              <label for="cpf">CPF</label>
+            </div>
+            <div>
+              <input type="text" id="matricula">
+              <label for="matricula">Matricula</label>
+            </div>
+            <div>
+              <input type="text" id="curso">
+              <label for="curso">Curso</label>
+            </div>
+            <div>
+              <input type="text" id="turma">
+              <label for="turma">Turma</label>
+            </div>
+            <div>
+              <input type="tel" id="telefone">
+              <label for="telefone">Telefone</label>
+            </div>
+            <div class="col-2">
+              <input type="text" id="email">
+              <label for="email">Email</label>
+            </div>
+            <button class="button col-2"><span>Entrar</span></button>
+
+          </div>
+        </form>
+        <div class="ilustracao">
+          <div class="contet-ilustracao">
+            <div class="logo">
+              <img src="./public/img/icons/logo.svg" alt="Logo ifce">
+              <h3>Ficha Ifce</h3>
+            </div>
+            <div><img src="./public/img/imagem-entrada.png" alt="ilustração de dados pessoal"></div>
+          </div>
         </div>
       </div>
     </section>

@@ -1,0 +1,82 @@
+.campo-entrada {
+  display: none;
+  padding: 40px;
+}
+
+.campo-entrada.active {
+  display: block;
+}
+
+.grid-entrada {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  height: 100%;
+}
+
+.ilustracao {
+  background-color: #fff;
+  height: 100%;
+  width: 100%;
+  padding-top: 80px;
+}
+
+.contet-ilustracao,
+.campo-entrada {
+  max-width: 540px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.campo-entrada h1 {
+  font-size: 3rem;
+  margin-bottom: 40px;
+}
+.form-entrada div {
+  position: relative;
+}
+
+.form-entrada label {
+  position: absolute;
+  top: 12px;
+  left: 20px;
+}
+
+.form-entrada input {
+  display: block;
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 1rem;
+  box-sizing: border-box;
+  border-radius: 8px;
+  box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.15);
+}
+
+.form-entrada input:focus {
+  outline: none;
+  border: none;
+  box-shadow: 0 2px 7px 0 rgba(65, 58, 2, 0.5);
+}
+
+.form-entrada input:focus ~ label {
+  display: block;
+  top: -28px;
+  transition: all 0.4s ease;
+}
+
+.grid-campo.active {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.grid-campo.active .col-2 {
+  grid-column: span 2;
+}
+
+.logo {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: end;
+}
