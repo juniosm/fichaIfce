@@ -4,22 +4,29 @@ import html2canvas from "html2canvas";
 
 import { jsPDF } from "jspdf";
 
-export default function GerarPdf() {
-  let htmlPdf = ` <div><h1>teste</h1></div>`;
+export default async function GerarPdf() {
+  const formulario = document.querySelector("#bodyPdf");
 
-  $("#button").click(event => {
+  $("#buttonPdf").click(event => {
+    const htpsf = `<div>
+    <p>Nome:${formulario.nome.value}</p>
+    <p>CPF:${formulario.cpf.value}</p>
+    <p>Matricula:${formulario.matricula.value}</p>
+    <p>Turma:${formulario.turma.value}</p>
+    </div>`;
+
     event.preventDefault();
-
-    var doc = new jsPDF();
-    doc.html($("#ID-pdf").html(), {
+    let doc = new jsPDF();
+    var pdfjs = document.querySelector("#bodyPdf");
+    doc.html(pdfjs, {
       callback: function (doc) {
         doc.output("dataurlnewwindow");
-      }
+      },
+      orientation: "portrait",
+      unit: "in",
+      format: "letter",
+      margin: 10,
+      html2canvas: { scale: 0.5 }
     });
-
-    doc.setProperties({
-      title: "Ficha"
-    });
-    // doc.output("dataurlnewwindow");
   });
 }
