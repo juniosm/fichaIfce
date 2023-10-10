@@ -17,55 +17,20 @@
 
   <main>
     <section>
-      <div class="grid-entrada">
-        <form class="form-entrada">
-          <div class="campo-entrada grid-campo active " id="entradaLogin">
+      <div class="grid-body">
+        <form class="form-entrada active">
+          <div class="campo-entrada" id="entradaLogin">
             <h1 class="col-2">Login</h1>
             <div class="col-2">
-              <input type="email" id="email"></input>
+              <input required="" type="email" id="email">
               <label for="email">Email</label>
             </div>
             <div class="col-2">
-              <input type="password" id="password"></input>
+              <input required="" type="password" id="password">
               <label for="password">Senha</label>
             </div>
+            <p class="link-cadastro">Não se Cadastrou? <span>Clique aqui</span></p>
             <button class="button col-2"><span>Entrar</span></button>
-
-          </div>
-          <div class="campo-entrada grid-campo " id="entradaCadastro">
-
-            <h1 class="col-2">Cadastro</h1>
-
-            <div>
-              <input type="text" id="nome">
-              <label for="nome">Nome</label>
-            </div>
-            <div>
-              <input type="cpf" id="cpf">
-              <label for="cpf">CPF</label>
-            </div>
-            <div>
-              <input type="text" id="matricula">
-              <label for="matricula">Matricula</label>
-            </div>
-            <div>
-              <input type="text" id="curso">
-              <label for="curso">Curso</label>
-            </div>
-            <div>
-              <input type="text" id="turma">
-              <label for="turma">Turma</label>
-            </div>
-            <div>
-              <input type="tel" id="telefone">
-              <label for="telefone">Telefone</label>
-            </div>
-            <div class="col-2">
-              <input type="text" id="email">
-              <label for="email">Email</label>
-            </div>
-            <button class="button col-2"><span>Entrar</span></button>
-
           </div>
         </form>
         <div class="ilustracao">
@@ -77,6 +42,46 @@
             <div><img src="./public/img/imagem-entrada.png" alt="ilustração de dados pessoal"></div>
           </div>
         </div>
+        <form class="form-entrada ">
+          <div class="campo-entrada " id="entradaCadastro">
+
+            <p class="link-cadastro">Já Possui conta?<span>Entre aqui</span></p>
+
+            <h1 class="col-2">Cadastro</h1>
+
+            <div>
+              <input required="" type="text" id="nome">
+              <label for="nome">Nome</label>
+            </div>
+            <div>
+              <input required="" type="cpf" id="cpf">
+              <label for="cpf">CPF</label>
+            </div>
+            <div>
+              <input required="" type="text" id="matricula">
+              <label for="matricula">Matricula</label>
+            </div>
+            <div>
+              <input required="" type="text" id="curso">
+              <label for="curso">Curso</label>
+            </div>
+            <div>
+              <input required="" type="text" id="turma">
+              <label for="turma">Turma</label>
+            </div>
+            <div>
+              <input required="" type="tel" id="telefone">
+              <label for="telefone">Telefone</label>
+            </div>
+            <div class="col-2">
+              <input required="" type="text" id="email">
+              <label for="email">Email</label>
+            </div>
+
+            <button class="button col-2"><span>Entrar</span></button>
+
+          </div>
+        </form>
       </div>
     </section>
   </main>
