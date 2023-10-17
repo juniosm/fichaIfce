@@ -16,8 +16,9 @@ const local = document.querySelector("#requerimento");
 
 MenuFicha(list, local);
 
-const linkEntrada = document.querySelector(".link-cadastro");
-const formEntrada = document.querySelector(".form-entrada");
+const linkCadastro = document.querySelector(".link-cadastro");
+const linkLogin = document.querySelector(".link-login");
+const formEntrada = document.querySelectorAll(".form-entrada");
 const ilustracao = document.querySelector(".ilustracao");
 
-EffectEntrada(linkEntrada, , ilustracao, formEntrada);
+EffectEntrada(linkCadastro, linkLogin, ilustracao, formEntrada);

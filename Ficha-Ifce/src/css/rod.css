@@ -6,6 +6,7 @@
 .rod {
   max-width: 1000px;
   margin: 0 auto 20px auto;
+  padding: 0 20px;
 }
 
 .rod p {

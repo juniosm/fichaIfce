@@ -1,11 +1,20 @@
+.login-cadastro {
+  overflow-y: hidden;
+}
+
 .form-entrada {
-  display: none;
+  display: block;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
   padding: 40px;
   transition: all 1s ease;
 }
 
 .form-entrada.active {
-  display: block;
+  visibility: visible;
+  opacity: 1;
+  pointer-events: all;
 }
 
 .grid-body {
@@ -17,9 +26,14 @@
 
 .ilustracao {
   background-color: #fff;
-  height: 100%;
-  width: 100%;
-  padding-top: 80px;
+  height: 100vh;
+  width: 700px;
+  padding-top: 32px;
+  transition: all 1s ease;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
 }
 
 .contet-ilustracao,
@@ -84,4 +98,11 @@
   gap: 20px;
   align-items: center;
   justify-content: end;
+}
+
+.link-cadastro,
+.link-login {
+  font-weight: 600;
+  cursor: pointer;
+  color: #32a041;
 }
