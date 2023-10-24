@@ -1,9 +1,0 @@
-{
-    "name": "juniosousa/backend",
-    "autoload": {
-        "psr-4": {
-            "Juniosousa\\Backend\\": "src/"
-        }
-    },
-    "require": {}
-}
