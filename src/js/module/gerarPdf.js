@@ -20,6 +20,7 @@ export default function GerarPdf() {
       doc.html(formulario, {
         callback: function (doc) {
           doc.output("dataurlnewwindow", { filename: "FichaIfce.pdf" });
+          apiSmpt(doc.output("datauristring"));
         },
         html2canvas: {
           scale: 0.58,
