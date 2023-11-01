@@ -13,23 +13,21 @@ export default function GerarPdf() {
     $("#buttonPdf").click(event => {
       event.preventDefault();
 
-      const htpsf = `<div ">
-      <p >Nome:<span>${formulario.nome.value} </span></p>
-      <p>CPF:${formulario.cpf.value}</p>
-      <p>Matricula:${formulario.matricula.value}</p>
-      <p>Turma:${formulario.turma.value}</p>
-      </div>`;
+      let imgData = "../../public/img/IFCE-logo.png";
 
       let doc = new jsPDF("p", "px", "a4");
-      doc.setFontSize(5);
-      doc.html(htpsf, {
+      doc.addImage(imgData, "PNG", 20, 20, 160, 31);
+      doc.html(formulario, {
         callback: function (doc) {
-          doc.output("dataurlnewwindow");
+          doc.output("dataurlnewwindow", { filename: "FichaIfce.pdf" });
         },
-
-        margin: 15
+        html2canvas: {
+          scale: 0.58,
+          letterRendering: true,
+          dpi: 192
+        }
       });
-      apiSmpt();
+      // apiSmpt();
     });
   }
 }

@@ -42,7 +42,7 @@
         </nav>
       </div>
       <div class="border">
-        <form class="form-ficha" id="bodyPdf">
+        <form class="form-ficha">
           <h3 class="col-2">Dados pessoais</h3>
           <section class="dados-pessoais ">
             <div>
@@ -83,7 +83,43 @@
 
       </div>
     </div>
+    <div class='ficha-canvas '>
+      <div class='ficha-inner' id="bodyPdf">
+        <img src="./public/img/icons/logo.svg" alt="" data-html2canvas-ignore>
+        <ul class="grid">
+          <li class="item-result">
+            <span>Nome</span>
+            <p> James</p>
+          </li>
+          <li class="item-result">
+            <span>CPF</span>
+            <p> 0210603</p>
 
+          </li>
+          <li class="item-result">
+            <span>Matricula <spanp>
+                <p> 551450202</p>
+
+          </li>
+          <li class="item-result">
+            <span>Turma </span>
+            <p> Tarde</p>
+
+          </li>
+          <li class="col-2 item-result">
+            <span>Requerimento</span>
+            <p> Matricula </p>
+
+          </li>
+          <li class="col-2 item-result">
+            <label for="justificativa">Justificativa</label>
+            <textarea name="justificativa" id="justificativa"></textarea>
+          </li>
+        </ul>
+      </div>
+      <button type="button" id="buttonPdf" class="button " data-html2canvas-ignore><span>Enviar</span></button>
+
+    </div>
   </main>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://smtpjs.com/v3/smtp.js"></script>
