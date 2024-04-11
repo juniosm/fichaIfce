@@ -5,7 +5,7 @@ import EffectEntrada from "./module/effectEntrada.js";
 
 gerarPdf();
 
-const buttonMenuLeft = document.querySelector(".buttonMenuLeft");
+const buttonMenuLeft = document.querySelector(".buttonMenuLeft svg");
 const tagMenuLeft = document.querySelector(".menu-left");
 const bodyContent = document.querySelector(".content-page");
 

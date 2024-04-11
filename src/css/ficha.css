@@ -1,205 +1,243 @@
 .form-ficha {
-  padding: 40px;
-  display: grid;
+   padding: 40px;
+   display: grid;
 }
 
 .form-ficha section,
 .form-ficha ul {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 28px;
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   gap: 28px;
 }
 
 .form-ficha section {
-  margin-bottom: 48px;
+   margin-bottom: 48px;
 }
 
 .form-ficha section .col-2 {
-  grid-column: span 2;
+   grid-column: span 2;
 }
 
 .home {
-  padding: 20px 30px;
+   padding: 20px 30px;
 }
 
 .content-page {
-  width: calc(100% - 250px);
-  position: relative;
-  left: 250px;
-  border-radius: 10px;
-  background: #ffffff;
-  padding: 20px;
-  box-sizing: border-box;
-  transition: all 0.5s ease;
+   width: calc(100% - 250px);
+   position: relative;
+   left: 250px;
+   border-radius: 10px;
+   background: #ffffff;
+   padding: 20px;
+   box-sizing: border-box;
+   transition: all 0.5s ease;
 }
 
 .content-page.active {
-  width: calc(100% - 50px);
-  left: 50px;
-  transition: all 0.5s ease;
+   width: calc(100% - 50px);
+   left: 50px;
+   transition: all 0.5s ease;
 }
 
 .content-page .border {
-  border-radius: 10px;
-  border: 2px solid #e2e4e5;
+   border-radius: 10px;
+   border: 2px solid #e2e4e5;
 }
 
 .header-content,
 .menu-ficha ul {
-  display: flex;
+   display: flex;
 }
 
 .header-content {
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 20px 40px 20px;
+   justify-content: space-between;
+   align-items: center;
+   padding: 20px 20px 40px 20px;
 }
 
-.header-content h2 {
-  font-weight: 600;
-  font-size: 1.8rem;
+.header-content h2,
+.flag-setores h2 {
+   font-weight: 600;
+   font-size: 1.8rem;
 }
 
 .header-content a {
-  font-size: 0.875rem;
-  display: grid;
-  justify-items: center;
-  position: relative;
-  align-items: end;
+   font-size: 0.875rem;
+   display: grid;
+   justify-items: center;
+   position: relative;
+   align-items: end;
 }
 
 .header-content a.active::after,
 .header-content a:hover::after {
-  content: "";
-  width: 0;
-  height: 2px;
-  background: #d3b2d6;
-  display: block;
-  position: absolute;
-  bottom: -4px;
-  animation: lineBotton 0.3s forwards;
+   content: "";
+   width: 0;
+   height: 2px;
+   background: #d3b2d6;
+   display: block;
+   position: absolute;
+   bottom: -4px;
+   animation: lineBotton 0.3s forwards;
 }
 
 @keyframes lineBotton {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 120%;
-  }
+   0% {
+      width: 0;
+   }
+   100% {
+      width: 120%;
+   }
 }
 
 .menu-ficha ul {
-  gap: 80px;
+   gap: 80px;
 }
 
 .form-ficha h3 {
-  margin-bottom: 28px;
+   margin-bottom: 28px;
 }
 
 .form-ficha label {
-  font-size: 0.875rem;
+   font-size: 0.875rem;
 }
 
 .form-ficha input {
-  border: none;
-  box-sizing: border-box;
-  padding: 0.5rem 0.5rem;
+   border: none;
+   box-sizing: border-box;
+   padding: 0.5rem 0.5rem;
 }
 
 .form-ficha input[type="text"] {
-  width: 100%;
-  border-bottom: 2px solid #e2e4e5;
-  box-sizing: border-box;
-  transition: all 0.4s ease;
+   width: 100%;
+   border-bottom: 2px solid #e2e4e5;
+   box-sizing: border-box;
+   transition: all 0.4s ease;
 }
 
 .form-ficha input:focus {
-  outline: none;
-  border: none;
-  border-bottom: 2px solid #32a041;
+   outline: none;
+   border: none;
+   border-bottom: 2px solid #32a041;
 }
 
 .form-ficha button {
-  width: 300px;
-  justify-self: end;
+   width: 300px;
+   justify-self: end;
 }
 
 .ficha-canvas {
-  align-items: center;
-  display: none;
-  position: fixed;
-  background: rgba(0, 0, 0, 0.25);
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  z-index: 1000;
+   align-items: center;
+   display: none;
+   position: fixed;
+   background: rgba(0, 0, 0, 0.25);
+   width: 100%;
+   height: 100%;
+   top: 0;
+   left: 0;
+   z-index: 1000;
 }
 
 .ficha-canvas.active {
-  display: flex;
+   display: flex;
 }
 
 .ficha-inner {
-  padding: 40px;
-  background: #ffffff;
-  width: 700px;
-  height: 600px;
-  margin: 100px auto;
-  border-radius: 1rem;
-  overflow-y: auto;
+   padding: 40px;
+   background: #ffffff;
+   width: 700px;
+   height: 600px;
+   margin: 100px auto;
+   border-radius: 1rem;
+   overflow-y: auto;
 }
 
 .border-modal {
-  padding: 20px;
-  border: 2px solid #d3b2d6;
-  border-radius: 0.5rem;
+   padding: 20px;
+   border: 2px solid #d3b2d6;
+   border-radius: 0.5rem;
 }
 
 .ficha-inner .grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   gap: 40px;
 }
 
 .ficha-inner .grid .col-2 {
-  grid-column: span 2;
+   grid-column: span 2;
 }
 
 .item-result span {
-  display: block;
-  color: #181818;
-  font-size: 1rem;
-  font-weight: 500;
+   display: block;
+   color: #181818;
+   font-size: 1rem;
+   font-weight: 500;
 }
 
 .item-result p {
-  display: block;
-  padding-top: 10px;
-  padding-bottom: 8px;
-  font-size: 1.2rem;
-  font-weight: 500;
-  border-bottom: 0.5px solid rgb(163, 163, 163);
+   display: block;
+   padding-top: 10px;
+   padding-bottom: 8px;
+   font-size: 1.2rem;
+   font-weight: 500;
+   border-bottom: 0.5px solid rgb(163, 163, 163);
 }
 
 .item-result label {
-  font-size: 1rem;
-  font-weight: 500;
-  display: block;
-  margin-bottom: 10px;
+   font-size: 1rem;
+   font-weight: 500;
+   display: block;
+   margin-bottom: 10px;
 }
 
 textarea {
-  display: block;
-  width: 100%;
-  min-height: 150px;
-  padding: 12px 20px;
-  box-sizing: border-box;
-  border: none;
-  border-radius: 4px;
-  background-color: #f8f8f8;
-  font-size: 16px;
-  resize: none;
-  font-family: inherit;
+   display: block;
+   width: 100%;
+   min-height: 150px;
+   padding: 12px 20px;
+   box-sizing: border-box;
+   border: none;
+   border-radius: 4px;
+   background-color: #f8f8f8;
+   font-size: 16px;
+   resize: none;
+   font-family: inherit;
+}
+
+.flag-setores {
+   padding: 20px 40px;
+}
+.flag-setores h2 {
+   margin-bottom: 32px;
+}
+.setores {
+   display: flex;
+   gap: 40px;
+   justify-content: center;
+}
+
+.setores li {
+   width: 300px;
+   height: 400px;
+   object-fit: cover;
+   border-radius: 8px;
+   position: relative;
+   background-color: #e3dcc2;
+}
+
+.setores .title-setor {
+   position: absolute;
+   font-size: 1.75rem;
+   font-weight: 600;
+   text-align: center;
+   text-transform: uppercase;
+   top: 100px;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+
+.setores .image-setor {
+   width: 250px;
+   height: 250px;
 }

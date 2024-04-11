@@ -1,108 +1,117 @@
 .login-cadastro {
-  overflow-y: hidden;
+   overflow: hidden;
 }
 
 .form-entrada {
-  display: block;
-  visibility: hidden;
-  opacity: 0;
-  pointer-events: none;
-  padding: 40px;
-  transition: all 1s ease;
+   display: block;
+   visibility: hidden;
+   opacity: 0;
+   pointer-events: none;
+   padding: 40px;
+   transition: all 1s ease;
 }
 
 .form-entrada.active {
-  visibility: visible;
-  opacity: 1;
-  pointer-events: all;
+   visibility: visible;
+   opacity: 1;
+   pointer-events: all;
 }
 
 .grid-body {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  height: 100%;
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   align-items: center;
+   height: 100%;
 }
 
 .ilustracao {
-  background-color: #fff;
-  height: 100vh;
-  width: 700px;
-  padding-top: 32px;
-  transition: all 1s ease;
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 10;
+   transition: all 1s linear;
+   background-color: #fff;
+   padding: 32px 40px 0 40px;
+   max-width: 600px;
+   height: 100vh;
+   position: absolute;
+   top: 0;
+   right: 0;
+   left: calc(100% - 600px);
+   z-index: 10;
 }
 
 .contet-ilustracao,
 .campo-entrada {
-  max-width: 540px;
-  margin-left: auto;
-  margin-right: auto;
+   max-width: 540px;
+   margin-left: auto;
+   margin-right: auto;
 }
 
 .campo-entrada h1 {
-  font-size: 3rem;
-  margin-bottom: 40px;
+   font-size: 3rem;
+   margin-bottom: 40px;
 }
 .form-entrada div {
-  position: relative;
+   position: relative;
 }
 
 .form-entrada label {
-  position: absolute;
-  top: 12px;
-  left: 20px;
-  transition: all 0.4s ease;
-  pointer-events: none;
+   position: absolute;
+   top: 12px;
+   left: 20px;
+   transition: all 0.4s ease;
+   pointer-events: none;
 }
 
 .form-entrada input {
-  display: block;
-  width: 100%;
-  margin-bottom: 20px;
-  padding: 1rem;
-  box-sizing: border-box;
-  border-radius: 8px;
-  border: none;
-  box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.15);
+   display: block;
+   width: 100%;
+   margin-bottom: 20px;
+   padding: 1rem;
+   box-sizing: border-box;
+   border-radius: 8px;
+   border: none;
+   box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.15);
 }
 
 .form-entrada input:focus {
-  outline: none;
-  border: none;
-  box-shadow: 0 2px 7px 0 rgba(65, 58, 2, 0.5);
+   outline: none;
+   border: none;
+   box-shadow: 0 2px 7px 0 rgba(65, 58, 2, 0.5);
 }
 
 .form-entrada input:focus ~ label,
 .form-entrada input:valid ~ label {
-  display: block;
-  top: -28px;
-  transition: all 0.4s ease;
+   display: block;
+   top: -28px;
+   transition: all 0.4s ease;
 }
 
 .campo-entrada {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   gap: 20px;
 }
 
 .campo-entrada .col-2 {
-  grid-column: span 2;
+   grid-column: span 2;
 }
 
 .logo {
-  display: flex;
-  gap: 20px;
-  align-items: center;
-  justify-content: end;
+   display: flex;
+   gap: 20px;
+   align-items: center;
+   justify-content: end;
 }
 
 .link-cadastro,
 .link-login {
-  font-weight: 600;
-  cursor: pointer;
-  color: #32a041;
+   font-weight: 600;
+   cursor: pointer;
+   color: #32a041;
+}
+
+.ilustracao.right {
+   right: 0;
+}
+
+.ilustracao.left {
+   left: 0;
 }

@@ -13,8 +13,14 @@
 </head>
 
 <body>
-  <nav class="menu-left">
-    <div class="cor-header"> <span class="buttonMenuLeft"></span></div>
+  <nav class="menu-left active">
+    <div class="cor-header"> <span class="buttonMenuLeft"><label class="hamburger">
+          <input type="checkbox">
+          <svg viewBox="0 0 32 32">
+            <path class="line line-top-bottom" d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 26 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"></path>
+            <path class="line" d="M7 16 27 16"></path>
+          </svg>
+        </label></span></div>
     <ul>
       <li><a href="/"> <img src="./public/img/icons/ficha.svg" alt="">Ficha</a></li>
       <li> <a href="./rod.html"><img src="./public/img/icons/ROD.svg" alt="">ROD</a></li>
@@ -28,8 +34,16 @@
   </header>
   <main class="home">
 
-    <div class="content-page">
-      <div class="header-content">
+    <div class="content-page active">
+      <div class="flag-setores">
+        <h2>Escolha o setor </h2>
+        <ul class="setores">
+          <li> <span class="title-setor">Cordenação</span> <img class="image-setor" src="" alt=""></li>
+          <li> <span class="title-setor">Cordenação</span> <img class="image-setor" src="" alt=""></li>
+          <li><span class="title-setor">Cordenação</span> <img class="image-setor" src="" alt=""></li>
+        </ul>
+      </div>
+      <!-- <div class="header-content">
         <h2>Ficha</h2>
         <nav class="menu-ficha">
           <ul>
@@ -81,8 +95,9 @@
           <button type="button" id="buttonPdf" class="button " data-html2canvas-ignore><span>Enviar</span></button>
         </form>
 
-      </div>
+      </div> -->
     </div>
+
     <div class='ficha-canvas '>
       <div class='ficha-inner' id="bodyPdf">
         <img src="./public/img/icons/logo.svg" alt="" data-html2canvas-ignore>
