@@ -2,6 +2,7 @@ import gerarPdf from "./module/gerarPdf.js";
 import ActiveMenuLeft from "./module/activeMenuLeft.js";
 import MenuFicha from "./module/menuFicha.js";
 import EffectEntrada from "./module/effectEntrada.js";
+import FlagContent from "./module/flagContent.js";
 
 gerarPdf();
 
@@ -22,3 +23,10 @@ const formEntrada = document.querySelectorAll(".form-entrada");
 const ilustracao = document.querySelector(".ilustracao");
 
 EffectEntrada(linkCadastro, linkLogin, ilustracao, formEntrada);
+
+const flagSetor = document.querySelector(".flag-setores");
+const flagForm = document.querySelector(".flag-form");
+const btnsSetores = document.querySelectorAll(".setores li");
+const btnBack = document.querySelector(".btnBack");
+
+FlagContent(flagSetor, flagForm, btnsSetores, btnBack);

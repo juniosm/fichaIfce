@@ -38,72 +38,92 @@
       <div class="flag-setores">
         <h2>Escolha o setor </h2>
         <ul class="setores">
-          <li> <span class="title-setor">Cordenação</span> <img class="image-setor" src="" alt=""></li>
-          <li> <span class="title-setor">Cordenação</span> <img class="image-setor" src="" alt=""></li>
-          <li><span class="title-setor">Cordenação</span> <img class="image-setor" src="" alt=""></li>
+          <li><img class="img-top" src="./public/img/teste.jpg" alt=""> <i class="logo-setor"><img src="./public/img/icons/ficha.svg" alt="icon"></i>
+            <span>
+              <h4>Cordenação</h4>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil quae quod aliquid nemo, nisi magnam consequatur velit qui atque eligendi fuga </p>
+            </span>
+          </li>
+          <li><img class="img-top" src="./public/img/teste2.jpg" alt=""> <i class="logo-setor"><img src="./public/img/icons/ficha.svg" alt="icon"></i>
+            <span>
+              <h4>Departamento</h4>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil quae quod aliquid nemo, nisi magnam consequatur velit qui atque eligendi fuga </p>
+            </span>
+          </li>
+          <li><img class="img-top" src="./public/img/teste3.jpg" alt=""> <i class="logo-setor"><img src="./public/img/icons/ficha.svg" alt="icon"></i>
+            <span>
+              <h4>Secretaria</h4>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil quae quod aliquid nemo, nisi magnam consequatur velit qui atque eligendi fuga </p>
+            </span>
+          </li>
         </ul>
       </div>
-      <!-- <div class="header-content">
-        <h2>Ficha</h2>
-        <nav class="menu-ficha">
-          <ul>
-            <li><a href="#matriculaMenu">Matriculas</a></li>
-            <li><a href="#disciplina">Disciplinas</a></li>
-            <li><a href="#edital">Editais</a></li>
-            <li><a href="#outros">Outros</a></li>
+      <div class="flag-form">
+        <div class="header-content">
+          <h2>Ficha</h2>
+          <nav class="menu-ficha">
+            <ul>
+              <li><a href="#matriculaMenu">Matriculas</a></li>
+              <li><a href="#disciplina">Disciplinas</a></li>
+              <li><a href="#edital">Editais</a></li>
+              <li><a href="#outros">Outros</a></li>
 
-          </ul>
-        </nav>
+            </ul>
+          </nav>
+        </div>
+        <div class="border">
+          <form class="form-ficha">
+            <h3 class="col-2">Dados pessoais</h3>
+            <section class="dados-pessoais ">
+              <div>
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" value="James">
+              </div>
+              <div>
+                <label for="cpf">CPF:</label>
+                <input type="text" id="cpf" value="000.000">
+              </div>
+              <div>
+                <label for="matricula">Matricula:</label>
+                <input type="text" id="matricula" value="220.92611">
+              </div>
+              <div>
+                <label for="curso">Curso:</label>
+                <input type="text" id="curso" value="Si">
+              </div>
+              <div>
+                <label for="turma">Turma:</label>
+                <input type="text" id="turma" value="7">
+              </div>
+              <div>
+                <label for="telefone">Telefone:</label>
+                <input type="text" id="telefone">
+              </div>
+              <div class="col-2">
+                <label for="email">Email:</label>
+                <input type="text" id="email">
+              </div>
+            </section>
+            <h3 class="col-2">Requerimento</h3>
+            <section id="requerimento">
+
+            </section>
+            <div class="flex">
+              <button type="button" id="btnBack" class="button btnBack" data-html2canvas-ignore><span>Voltar</span></button>
+              <button type="button" id="buttonPdf" class="button " data-html2canvas-ignore><span>Enviar</span></button>
+            </div>
+          </form>
+
+        </div>
       </div>
-      <div class="border">
-        <form class="form-ficha">
-          <h3 class="col-2">Dados pessoais</h3>
-          <section class="dados-pessoais ">
-            <div>
-              <label for="nome">Nome:</label>
-              <input type="text" id="nome" value="James">
-            </div>
-            <div>
-              <label for="cpf">CPF:</label>
-              <input type="text" id="cpf" value="000.000">
-            </div>
-            <div>
-              <label for="matricula">Matricula:</label>
-              <input type="text" id="matricula" value="220.92611">
-            </div>
-            <div>
-              <label for="curso">Curso:</label>
-              <input type="text" id="curso" value="Si">
-            </div>
-            <div>
-              <label for="turma">Turma:</label>
-              <input type="text" id="turma" value="7">
-            </div>
-            <div>
-              <label for="telefone">Telefone:</label>
-              <input type="text" id="telefone">
-            </div>
-            <div class="col-2">
-              <label for="email">Email:</label>
-              <input type="text" id="email">
-            </div>
-          </section>
-          <h3 class="col-2">Requerimento</h3>
-          <section id="requerimento">
-
-          </section>
-          <button type="button" id="buttonPdf" class="button " data-html2canvas-ignore><span>Enviar</span></button>
-        </form>
-
-      </div> -->
     </div>
 
-    <div class='ficha-canvas '>
+    <div class='ficha-canvas active '>
       <div class='ficha-inner' id="bodyPdf">
         <img src="./public/img/icons/logo.svg" alt="" data-html2canvas-ignore>
         <ul class="grid">
           <li class="item-result">
-            <span>Nome</span>
+            <span>Nome asasd</span>
             <p> James</p>
           </li>
           <li class="item-result">
@@ -128,7 +148,7 @@
           </li>
           <li class="col-2 item-result">
             <label for="justificativa">Justificativa</label>
-            <textarea name="justificativa" id="justificativa"></textarea>
+            <textarea class="textarea" cols="20" rows="8" name="justificativa" id="justificativa"></textarea>
           </li>
         </ul>
       </div>
