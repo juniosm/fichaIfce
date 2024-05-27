@@ -9,27 +9,28 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="shortcut icon" href="./public/img/icons/favicosn.svg">
-
   <title>Login</title>
+  <script type="module" src="./src/js/Acess/acess.js"></script>
 </head>
 
 <body class="login-cadastro">
   <main>
     <section class="section-login">
       <div class="grid-body">
-        <form class="form-entrada active">
+        <form class="form-entrada active form-login">
           <div class="campo-entrada" id="entradaLogin">
             <h1 class="col-2">Login</h1>
+            <span class="msg-login"></span>
             <div class="col-2">
-              <input required="" type="email" id="email">
-              <label for="email">Email</label>
+              <input required name="email-login" type="email" id="email-login">
+              <label for="email-login">Email</label>
             </div>
             <div class="col-2">
-              <input required="" type="password" id="password">
-              <label for="password">Senha</label>
+              <input required name="password" type="password" id="password-login">
+              <label for="password-login">Senha</label>
             </div>
             <p>Não se Cadastrou? <span class="link-cadastro">Clique aqui</span></p>
-            <button class="button col-2"><span>Entrar</span></button>
+            <button class="button col-2 btn-acess"><span>Entrar</span></button>
           </div>
         </form>
         <div class="ilustracao">
@@ -41,50 +42,58 @@
             <div><img src="./public/img/imagem-entrada.png" alt="ilustração de dados pessoal"></div>
           </div>
         </div>
-        <form class="form-entrada ">
-          <div class="campo-entrada " id="entradaCadastro">
-
+        <form class="form-entrada form-register">
+          <div class="campo-entrada valid " id="entradaCadastro">
             <p>Já Possui conta? <span class="link-login">Entre aqui</span></p>
-
             <h1 class="col-2">Cadastro</h1>
-
             <div>
-              <input required="" type="text" id="nome">
+              <input required name="nome" type="text" id="nome">
               <label for="nome">Nome</label>
+              <span class="error-input"></span>
             </div>
             <div>
-              <input required="" type="cpf" id="cpf">
+              <input required name="cpf" type="text" id="cpf">
               <label for="cpf">CPF</label>
+              <span class="error-input"></span>
             </div>
             <div>
-              <input required="" type="text" id="matricula">
+              <input required name="matricula" type="text" id="matricula">
               <label for="matricula">Matricula</label>
+              <span class="error-input"></span>
             </div>
             <div>
-              <input required="" type="text" id="curso">
+              <input required name="curso" type="text" id="curso">
               <label for="curso">Curso</label>
+              <span class="error-input"></span>
             </div>
             <div>
-              <input required="" type="text" id="turma">
+              <input required name="turma" type="text" id="turma">
               <label for="turma">Turma</label>
+              <span class="error-input"></span>
             </div>
             <div>
-              <input required="" type="tel" id="telefone">
+              <input required name="telefone" type="tel" id="telefone">
               <label for="telefone">Telefone</label>
+              <span class="error-input"></span>
             </div>
             <div class="col-2">
-              <input required="" type="text" id="email">
+              <input required name="email" type="email" id="email">
               <label for="email">Email</label>
+              <span class="error-input"></span>
             </div>
-
-            <button class="button col-2"><span>Entrar</span></button>
+            <div class="col-2">
+              <input required name="password" type="password" id="password">
+              <label for="password">Senha</label>
+              <span class="error-input"></span>
+            </div>
+            <button class="button col-2 btn-register"><span>Cadastre</span></button>
 
           </div>
         </form>
       </div>
     </section>
   </main>
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script type="module" src="src/js/main.js"></script>
 </body>
 

@@ -1,18 +1,23 @@
 export default function flagContent(setor, form, btn, btnBack) {
-   setor.classList.add("active");
-   const pageHomeChange = () => {
-      setor.classList.remove("active");
-      form.classList.add("active");
-   };
-
-   const backPage = () => {
-      form.classList.remove("active");
+   if (setor && form && btn && btnBack) {
       setor.classList.add("active");
-   };
+      const pageHomeChange = (element, e) => {
+         setor.classList.remove("active");
+         form.classList.add("active");
+         localStorage.setItem("email", e.dataset.email);
+      };
 
-   btn.forEach(e => {
-      e.addEventListener("click", pageHomeChange);
-   });
+      const backPage = () => {
+         form.classList.remove("active");
+         setor.classList.add("active");
+      };
 
-   btnBack.addEventListener("click", backPage);
+      btn.forEach(e => {
+         e.addEventListener("click", element => {
+            pageHomeChange(element, e);
+         });
+      });
+
+      btnBack.addEventListener("click", backPage);
+   }
 }

@@ -34,8 +34,8 @@
 }
 
 .content-page.active {
-   width: calc(100% - 50px);
-   left: 50px;
+   width: calc(100% - 0px);
+   left: 0px;
    transition: all 0.5s ease;
 }
 
@@ -121,18 +121,22 @@
    border-bottom: 2px solid #32a041;
 }
 
+.form-ficha input:disabled {
+   cursor: not-allowed;
+   background: transparent;
+}
+
 .form-ficha button {
-   width: 300px;
-   justify-self: end;
+   max-width: 100%;
 }
 
 .ficha-canvas {
-   align-items: center;
+   align-items: start;
    display: none;
    position: absolute;
    background: rgba(0, 0, 0, 0.25);
    width: 100%;
-   height: 100vh;
+   height: 100%;
    top: 0;
    left: 0;
    z-index: 1000;
@@ -140,16 +144,23 @@
 
 .ficha-canvas.active {
    display: flex;
+   overflow-x: scroll;
+}
+
+.ficha-canvas::-webkit-scrollbar {
+   display: none;
 }
 
 .ficha-inner {
    padding: 20px;
    background: #ffffff;
-   width: 820px;
-   height: 600px;
+   min-width: 820px;
+   height: auto;
    margin: 100px auto;
    border-radius: 0;
    overflow-y: auto;
+   border: 5px solid #111;
+   position: relative;
 }
 
 .border-modal {
@@ -191,16 +202,18 @@
    margin-bottom: 10px;
 }
 
+.item-result.sei {
+   border: 1px solid #111;
+   padding: 10px;
+}
+
 textarea {
-   background-image: url("https://i.stack.imgur.com/yWNH7.png");
    width: 100%;
    min-height: 150px;
    box-sizing: border-box;
-   border-radius: 4px;
-   background-color: #f8f8f8;
    font-size: 16px;
    font-family: inherit;
-   border: none;
+   padding: 10px;
 }
 
 .flag-setores {
@@ -216,8 +229,8 @@ textarea {
 }
 
 .setores li {
-   width: 300px;
-   height: 350px;
+   max-width: 300px;
+   min-height: 350px;
    object-fit: cover;
    border-radius: 8px;
    position: relative;
@@ -281,6 +294,91 @@ textarea {
    animation: init 2s forwards;
 }
 
+.buttons-fichas {
+   justify-self: end;
+}
+
+.error-notification {
+   display: block;
+   position: fixed;
+   width: 350px;
+   min-height: 150px;
+   background: #ffffff;
+   box-shadow: 5px 5px 10px rgba(245, 23, 23, 0.438);
+   top: 10px;
+   right: 5px;
+   border-radius: 4px;
+   transition: all 0.3s linear;
+   z-index: 900;
+}
+
+.error-notification .details-modal-content {
+   border-top: 1px solid #e0e0e0;
+   padding: 10px 20px;
+}
+
+.error-notification h1 {
+   font-size: 1.25rem;
+   font-weight: 600;
+   line-height: normal;
+   padding: 10px 20px;
+}
+
+.content-file {
+   margin-bottom: 40px;
+}
+
+.content-file label {
+   display: block;
+   margin-bottom: 8px;
+   color: #525252;
+}
+
+.content-file input[type="file"] {
+   background: #ffffff;
+   border: 1px solid #32a041;
+   border-radius: 4px;
+   width: 100%;
+}
+
+.content-file input[type="file"]::file-selector-button {
+   background: #32a041;
+   border: none;
+   color: white;
+   font-size: 1rem;
+   padding: 8px;
+}
+
+.item-result .creat-checkbox {
+   width: 16px;
+   height: 16px;
+   border: 2px solid #343434;
+   border-radius: 4px;
+   position: relative;
+}
+
+.creat-checkbox::after {
+   content: "";
+   position: absolute;
+   left: 4px;
+   width: 0.3em;
+   height: 0.65em;
+   border: solid #343434;
+   border-width: 0 0.2em 0.2em 0;
+   border-radius: 2px;
+   transform: rotate(45deg);
+}
+.flex-check {
+   display: flex;
+   align-items: center;
+   flex-wrap: nowrap;
+   gap: 10px;
+}
+
+.flex-check div.active {
+   padding-bottom: 14px;
+}
+
 @keyframes init {
    0% {
       opacity: 0;
@@ -291,5 +389,55 @@ textarea {
    }
    100% {
       display: block;
+   }
+}
+
+@media (max-width: 900px) {
+   .header-content {
+      flex-direction: column;
+      gap: 20px;
+      align-items: initial;
+   }
+
+   .menu-ficha ul {
+      gap: 20px;
+      justify-content: space-between;
+      flex-wrap: wrap;
+   }
+}
+
+@media (max-width: 750px) {
+   .ficha-inner .grid,
+   .form-ficha section,
+   .form-ficha ul {
+      grid-template-columns: 1fr;
+   }
+
+   .form-ficha {
+      padding: 1rem;
+   }
+
+   .flag-setores {
+      padding: 1rem;
+   }
+
+   .form-ficha section .col-2 {
+      grid-column: initial;
+   }
+
+   .content-page {
+      width: calc(100% - 50px);
+      left: 50px;
+   }
+
+   .setores {
+      flex-direction: column;
+      align-items: center;
+   }
+}
+
+@media (max-width: 500px) {
+   .home {
+      padding: 10px 15px;
    }
 }

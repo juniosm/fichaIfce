@@ -42,6 +42,10 @@ ul li a {
    font-weight: 600;
 }
 
+input {
+   margin: 0;
+}
+
 .button {
    padding: 0 2rem;
    height: 3rem;
@@ -81,4 +85,9 @@ ul li a {
    transition: all 0.8s ease;
    background: #184603;
    transform-origin: 0 50%;
+}
+
+.off-user {
+   font-weight: 600;
+   cursor: pointer;
 }

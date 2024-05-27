@@ -10,6 +10,7 @@
   <link rel="shortcut icon" href="./public/img/icons/favicosn.svg">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   <title>Ficha Ifce</title>
+  <script type="module" src="./src/js/Acess/acess.js"></script>
 </head>
 
 <body>
@@ -29,7 +30,7 @@
   <header>
     <div>
       <span class="user-name"> Name</span>
-      <span>sair</span>
+      <span class="off-user">sair</span>
     </div>
   </header>
   <main class="home">
@@ -38,19 +39,19 @@
       <div class="flag-setores">
         <h2>Escolha o setor </h2>
         <ul class="setores">
-          <li><img class="img-top" src="./public/img/teste.jpg" alt=""> <i class="logo-setor"><img src="./public/img/icons/ficha.svg" alt="icon"></i>
+          <li data-email="cordenacao@email.com"><img class="img-top" src="./public/img/teste.jpg" alt=""> <i class="logo-setor"><img src="./public/img/icons/ficha.svg" alt="icon"></i>
             <span>
               <h4>Cordenação</h4>
               <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil quae quod aliquid nemo, nisi magnam consequatur velit qui atque eligendi fuga </p>
             </span>
           </li>
-          <li><img class="img-top" src="./public/img/teste2.jpg" alt=""> <i class="logo-setor"><img src="./public/img/icons/ficha.svg" alt="icon"></i>
+          <li data-email="departamento@email.com"><img class="img-top" src="./public/img/teste2.jpg" alt=""> <i class="logo-setor"><img src="./public/img/icons/ficha.svg" alt="icon"></i>
             <span>
               <h4>Departamento</h4>
               <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil quae quod aliquid nemo, nisi magnam consequatur velit qui atque eligendi fuga </p>
             </span>
           </li>
-          <li><img class="img-top" src="./public/img/teste3.jpg" alt=""> <i class="logo-setor"><img src="./public/img/icons/ficha.svg" alt="icon"></i>
+          <li data-email="secretaria@email.com"><img class="img-top" src="./public/img/teste3.jpg" alt=""> <i class="logo-setor"><img src="./public/img/icons/ficha.svg" alt="icon"></i>
             <span>
               <h4>Secretaria</h4>
               <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil quae quod aliquid nemo, nisi magnam consequatur velit qui atque eligendi fuga </p>
@@ -77,23 +78,23 @@
             <section class="dados-pessoais ">
               <div>
                 <label for="nome">Nome:</label>
-                <input type="text" id="nome" value="James">
+                <input type="text" id="nome">
               </div>
               <div>
                 <label for="cpf">CPF:</label>
-                <input type="text" id="cpf" value="000.000">
+                <input type="text" id="cpf">
               </div>
               <div>
                 <label for="matricula">Matricula:</label>
-                <input type="text" id="matricula" value="220.92611">
+                <input type="text" id="matricula">
               </div>
               <div>
                 <label for="curso">Curso:</label>
-                <input type="text" id="curso" value="Si">
+                <input type="text" id="curso">
               </div>
               <div>
                 <label for="turma">Turma:</label>
-                <input type="text" id="turma" value="7">
+                <input type="text" id="turma">
               </div>
               <div>
                 <label for="telefone">Telefone:</label>
@@ -108,9 +109,9 @@
             <section id="requerimento">
 
             </section>
-            <div class="flex">
-              <button type="button" id="btnBack" class="button btnBack" data-html2canvas-ignore><span>Voltar</span></button>
-              <button type="button" id="buttonPdf" class="button " data-html2canvas-ignore><span>Enviar</span></button>
+            <div class="flex buttons-fichas">
+              <button type="button" id="btnBack" class="button btnBack"><span>Voltar</span></button>
+              <button type="button" id="pdfView" class="button"><span>Enviar</span></button>
             </div>
           </form>
 
@@ -118,41 +119,68 @@
       </div>
     </div>
 
-    <div class='ficha-canvas active '>
+    <div class='ficha-canvas  '>
       <div class='ficha-inner' id="bodyPdf">
-        <img src="./public/img/icons/logo.svg" alt="" data-html2canvas-ignore>
         <ul class="grid">
+          <div class="logo-pdf">
+            <img width="300" src=" ./public/img/IFCE-logo.png" alt="Logo ifce">
+          </div>
+          <li class="item-result sei">
+            <span>Nº do Processo – SEI </span>
+            <p class="sei">. </p>
+          </li>
           <li class="item-result">
-            <span>Nome asasd</span>
-            <p> James</p>
+            <span>Nome </span>
+            <p class="nome"> </p>
           </li>
           <li class="item-result">
             <span>CPF</span>
-            <p> 0210603</p>
-
+            <p class="cpf"> </p>
           </li>
           <li class="item-result">
             <span>Matricula <spanp>
-                <p> 551450202</p>
-
+                <p class="matricula"> </p>
           </li>
           <li class="item-result">
             <span>Turma </span>
-            <p> Tarde</p>
-
+            <p class="turma"> </p>
           </li>
-          <li class="col-2 item-result">
-            <span>Requerimento</span>
-            <p> Matricula </p>
-
+          <li class="item-result">
+            <span>Curso </span>
+            <p class="curso"> </p>
+          </li>
+          <li class="item-result">
+            <span>Telefone </span>
+            <p class="telefone"> </p>
+          </li>
+          <li class="item-result col-2">
+            <span>Email </span>
+            <p class="email"> </p>
+          </li>
+          <li class="col-2 item-result request-farm">
+            <h3 style="margin-bottom: 20px;">Requerimento</h3>
+            <div class="itens-request"></div>
           </li>
           <li class="col-2 item-result">
             <label for="justificativa">Justificativa</label>
-            <textarea class="textarea" cols="20" rows="8" name="justificativa" id="justificativa"></textarea>
+            <textarea class="textarea" cols="20" rows="6" name="justificativa" id="justificativa">Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+            </textarea>
+          </li>
+          <li class="grid col-2">
+            <div class="flex">Crato-CE,<span class="dia">26</span>de<span class="mes">Abril</span>de<span class="ano">2024</span>.</div>
+            <div>
+              <p class="assinatura"></p>
+              <span>Assinatura</span>
+            </div>
+          </li>
+          <li data-html2canvas-ignore class="content-file">
+            <label for="fileAdd">Adicione um arquivo se necessário</label>
+            <input type="file" id="fileAdd" name="fileAdd" accept="application/pdf, .doc,.docx" />
           </li>
         </ul>
+        <button type="button" id="buttonPdf" class="button" data-html2canvas-ignore><span>Enviar</span></button>
+
       </div>
-      <button type="button" id="buttonPdf" class="button " data-html2canvas-ignore><span>Enviar</span></button>
 
     </div>
   </main>

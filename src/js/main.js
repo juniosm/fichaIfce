@@ -3,6 +3,16 @@ import ActiveMenuLeft from "./module/activeMenuLeft.js";
 import MenuFicha from "./module/menuFicha.js";
 import EffectEntrada from "./module/effectEntrada.js";
 import FlagContent from "./module/flagContent.js";
+import Login from "./module/login.js";
+import ReturnUser from "./module/returnUser.js";
+import ContentRequeriment from "./module/contentRequeriment.js";
+import Validate from "./module/validated.js";
+
+Validate();
+
+Login();
+
+ReturnUser();
 
 gerarPdf();
 
@@ -30,3 +40,5 @@ const btnsSetores = document.querySelectorAll(".setores li");
 const btnBack = document.querySelector(".btnBack");
 
 FlagContent(flagSetor, flagForm, btnsSetores, btnBack);
+
+ContentRequeriment();
