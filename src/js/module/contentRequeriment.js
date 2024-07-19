@@ -1,6 +1,6 @@
 export default function ContentRequeriment() {
    const requerimento = document.querySelectorAll(
-      "#requerimento input[type='text'], #requerimento input[type='checkbox'] "
+      "#requerimento input[type='text'], #requerimento input[type='checkbox'], #requerimento input[type='radio']"
    );
    const btnmodal = document.querySelector("#pdfView");
    const campResult = document.querySelector(".itens-request");
@@ -25,18 +25,31 @@ export default function ContentRequeriment() {
       const insertValue = () => {
          campResult.innerHTML = "";
          requerimento.forEach(e => {
-            if (e.value !== "") {
+            if (e.value !== "" && e.type !== "radio") {
                campResult.innerHTML += `
             <li class="item-result">
             <span>${e.labels[0].textContent} </span>
             <p>${e.value}</p>
             </li>`;
-            } else if (e.checked === true) {
+            } else if (e.checked === true && e.type !== "radio") {
                campResult.innerHTML += `
             <li class="item-result flex-check">
             <span class="creat-checkbox"></span>
             <div>${e.labels[0].textContent} </div>
             </li>`;
+            } else if (e.type === "radio") {
+               const text = document.querySelector(
+                  "#requerimento input[type='text']"
+               );
+               campResult.innerHTML += `
+               <li class="item-result ">
+               <span>${text.labels[0].textContent}</span>
+               <p>${text.value}</p>
+               <div class="flex-check">
+               <span class="creat-checkbox"></span>
+               <div>${e.labels[0].textContent} </div>
+               </div>
+               </li>`;
             }
          });
       };

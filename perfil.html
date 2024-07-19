@@ -75,176 +75,50 @@
       <span class="off-user">sair</span>
     </div>
   </header>
-  <main class="home">
 
+  <main class="mainPerfilUser home">
     <div class="content-page active">
-      <div class="flag-setores">
-        <h2>Escolha o setor </h2>
-        <ul class="setores">
-          <li data-email="cordenacao@email.com">
-            <img class="img-top" src="./public/img/teste.jpg" alt="">
-            <span class="text-setor">
-              <h4>Cordenação</h4>
-            </span>
-          </li>
-          <li data-email="departamento@email.com">
-
-            <img class="img-top" src="./public/img/teste2.jpg" alt="">
-            <span class="text-setor">
-              <h4>Departamento</h4>
-
-            </span>
-          </li>
-          <li data-email="secretaria@email.com">
-            <img class="img-top" src="./public/img/teste3.jpg" alt="">
-            <span class="text-setor">
-              <h4>Secretaria</h4>
-
-            </span>
-          </li>
-        </ul>
-      </div>
-      <div class="flag-form">
-        <div class="header-content">
-          <h2>Ficha</h2>
-          <nav class="menu-ficha">
-            <ul>
-              <li><a href="#matriculaMenu">Matriculas</a></li>
-              <li><a href="#disciplina">Disciplinas</a></li>
-              <li><a href="#edital">Editais</a></li>
-              <li><a href="#outros">Outros</a></li>
-
-            </ul>
-          </nav>
-        </div>
-        <div class="border">
-          <form class="form-ficha">
-            <h3 class="col-2">Dados pessoais</h3>
-            <section class="dados-pessoais ">
-              <div>
-                <label for="nome">Nome:</label>
-                <input type="text" id="nome">
-              </div>
-              <div>
-                <label for="cpf">CPF:</label>
-                <input type="text" id="cpf">
-              </div>
-              <div>
-                <label for="matricula">Matricula:</label>
-                <input type="text" id="matricula">
-              </div>
-              <div>
-                <label for="curso">Curso:</label>
-                <input type="text" id="curso">
-              </div>
-              <div>
-                <label for="turma">Turma:</label>
-                <input type="text" id="turma">
-              </div>
-              <div>
-                <label for="telefone">Telefone:</label>
-                <input type="text" id="telefone">
-              </div>
-              <div class="col-2">
-                <label for="email">Email:</label>
-                <input type="text" id="email">
-              </div>
-            </section>
-            <h3 class="col-2">Requerimento</h3>
-            <section id="requerimento">
-
-            </section>
-            <div class="flex buttons-fichas">
-              <button type="button" id="btnBack" class="button btnBack"><span>Voltar</span></button>
-              <button type="button" id="pdfView" class="button"><span>Enviar</span></button>
-            </div>
-          </form>
-
-        </div>
-      </div>
-    </div>
-
-    <div class='ficha-canvas  '>
-      <div class='ficha-inner' id="bodyPdf">
-        <ul class="grid">
-          <div class="logo-pdf">
-            <img width="300" src=" ./public/img/IFCE-logo.png" alt="Logo ifce">
+      <form class="form-ficha perfil">
+        <h3 class="col-2"> Editar dados pessoais </h3>
+        <section class="dados-pessoais ">
+          <div>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome">
           </div>
-          <li class="item-result sei">
-            <span>Nº do Processo – SEI </span>
-            <p class="sei">. </p>
-          </li>
-          <li class="item-result">
-            <span>Nome </span>
-            <p class="nome"> </p>
-          </li>
-          <li class="item-result">
-            <span>CPF</span>
-            <p class="cpf"> </p>
-          </li>
-          <li class="item-result">
-            <span>Matricula <spanp>
-                <p class="matricula"> </p>
-          </li>
-          <li class="item-result">
-            <span>Turma </span>
-            <p class="turma"> </p>
-          </li>
-          <li class="item-result">
-            <span>Curso </span>
-            <p class="curso"> </p>
-          </li>
-          <li class="item-result">
-            <span>Telefone </span>
-            <p class="telefone"> </p>
-          </li>
-          <li class="item-result col-2">
-            <span style="margin-bottom: 10px;">Email</span>
-            <textarea cols="20" rows="1" class="textarea-email email" disabled></textarea>
-          </li>
-          <li class="col-2 item-result request-farm">
-            <h3 style="margin-bottom: 20px;">Requerimento</h3>
-            <div class="itens-request"></div>
-          </li>
-          <li class="col-2 item-result">
-            <label for="justificativa">Justificativa</label>
-            <textarea class="textarea" cols="20" rows="6" name="justificativa" id="justificativa">Lorem ipsum dolor, sit amet@ consectetur adipisicing elit. 
-            </textarea>
-          </li>
-          <li class="grid col-2">
-            <div class="flex">Crato-CE,<span class="dia"></span> de<span class="mes"></span>de<span class="ano"></span>.</div>
-            <div class="assinaturaContent">
-              <p class="assinatura"></p>
-              <span>Assinatura</span>
-            </div>
-          </li>
-          <li data-html2canvas-ignore class="content-file">
-            <label for="fileAdd">Adicione um arquivo se necessário</label>
-            <input type="file" id="fileAdd" name="fileAdd" accept="application/pdf, .doc,.docx" />
-          </li>
-        </ul>
-        <button type="button" id="buttonPdf" class="button" data-html2canvas-ignore><span>Enviar</span></button>
-
-      </div>
-
+          <div>
+            <label for="cpf">CPF:</label>
+            <input type="text" id="cpf">
+          </div>
+          <div>
+            <label for="matricula">Matricula:</label>
+            <input type="text" id="matricula">
+          </div>
+          <div>
+            <label for="curso">Curso:</label>
+            <input type="text" id="curso">
+          </div>
+          <div>
+            <label for="turma">Turma:</label>
+            <input type="text" id="turma">
+          </div>
+          <div>
+            <label for="telefone">Telefone:</label>
+            <input type="text" id="telefone">
+          </div>
+          <div class="col-2">
+            <label for="email">Email:</label>
+            <input type="text" id="email">
+          </div>
+          <button type="button" id="editPerfil" class="button"><span>Editar</span></button>
+      </form>
     </div>
+
   </main>
+
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://smtpjs.com/v3/smtp.js"></script>
   <script type="module" src="src/js/main.js"></script>
-  <script>
-    const data = new Date()
-    const dia = document.querySelector(".dia")
-    const mes = document.querySelector(".mes")
-    const ano = document.querySelector(".ano")
-    const arrMeses = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro']
-
-    data.getDate() < 10 ? dia.innerHTML = `0${data.getDate()}` : dia.innerHTML = `${data.getDate()}`
-    mes.innerHTML = arrMeses[data.getMonth()]
-    ano.innerHTML = data.getFullYear()
-
-  </script>
-
 </body>
 
 </html>

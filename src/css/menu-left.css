@@ -18,19 +18,19 @@
 
 .cor-header span {
    display: block;
-   width: 24px;
-   height: 24px;
+   width: 40px;
+   height: 40px;
    position: absolute;
    background: transparent;
    border: none;
-   border-radius: 0.2rem;
-   top: 10px;
-   right: 20px;
+   top: 8px;
+   right: 2px;
    cursor: pointer;
 }
 
 .menu-left ul {
    padding: 28px;
+   position: relative;
 }
 
 .menu-left ul li a {
@@ -45,24 +45,111 @@
    width: 50px;
    height: 60px;
    transition: all 0.5s ease;
+   border-radius: 0 0 10px 0;
 }
 
-.menu-left.active ul li a {
+.menu-left.active .cor-header {
+   border-radius: 0 0 10px 0;
+}
+
+.menu-left.active ul li a,
+.menu-left.active .perfilLink {
    opacity: 0;
    pointer-events: none;
 }
 
-.menu-left a.active,
-.menu-left a:hover {
+.menu-left li a.active,
+.menu-left li a:hover {
    padding: 0.875rem;
    border-radius: 8px;
    background: #32a041;
    color: #ffffff;
 }
 
-.menu-left a.active img,
-.menu-left a:hover img {
+.menu-left li a.active img,
+.menu-left li a:hover img {
    filter: invert(100%);
+}
+
+.menu-left > div {
+   height: 100vh;
+   position: relative;
+}
+
+.perfilLink {
+   position: absolute;
+   bottom: 20px;
+   transition: 0.3s ease;
+   padding: 20px;
+   width: 80%;
+}
+
+.menu-left .perfilLink a {
+   display: block;
+   padding: 5px;
+   background: #ffffff;
+   border: 3px solid #000000;
+   height: 230px;
+   border-radius: 10px;
+   transition: 0.3s ease;
+   position: relative;
+}
+
+.menu-left .perfilLink .shappe-green {
+   position: absolute;
+   top: -15px;
+   right: -10px;
+   transition: all 0.3s linear;
+}
+
+.menu-left .perfilLink span {
+   font-size: 0.875rem;
+   font-weight: 600;
+}
+
+.menu-left .perfilLink .text-top {
+   position: relative;
+   top: -4px;
+   left: 8px;
+}
+
+.menu-left .perfilLink .shappe-text {
+   position: absolute;
+   top: 40px;
+   right: -10px;
+   transition: all 0.3s linear;
+}
+
+.menu-left .perfilLink .shappe-text .text-mid {
+   margin-left: 5px;
+   margin-bottom: 8px;
+}
+
+.menu-left .perfilLink a:hover {
+   scale: 1.05;
+}
+
+.menu-left .perfilLink a:hover .shappe-green,
+.menu-left .perfilLink a:hover .shappe-text {
+   transform: translateY(8px);
+}
+
+.perfilLink .icons-bottoms,
+.perfilLink .img-perfil {
+   position: absolute;
+   bottom: 0;
+}
+
+.perfilLink .icons-bottoms {
+   left: 10px;
+}
+
+.perfilLink .icons-bottoms img {
+   margin-bottom: 10px;
+}
+
+.perfilLink .img-perfil {
+   right: -30px;
 }
 
 /* Buttom */

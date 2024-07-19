@@ -39,6 +39,7 @@ const singIn = async (login, password) => {
 };
 const destroy = async (login, password) => {
    const { error } = await supabase.auth.signOut();
+   window.localStorage.removeItem("userData");
    window.location.href = window.location.origin + "/entrada.html";
 };
 const resetPasswordForEmail = async () => {
@@ -63,10 +64,15 @@ const getSession = async () => {
 const getUser = async () => {
    const { data, error } = await supabase.auth.getUser();
    let sessiond = await getSession();
-   return (
-      sessiond.data.session !== null &&
-      sessiond.data.session.user.id === data.user.id
-   );
+   if (!error) {
+      return (
+         sessiond.data.session !== null &&
+         sessiond.data.session.user.id === data.user.id
+      );
+   } else {
+      localStorage.setItem("sb-" + supaBaseUrl + "-auth-token", "");
+      return (window.location.href = window.location.origin + "/entrada.html");
+   }
 };
 
 const selectUser = async () => {
@@ -76,6 +82,7 @@ const selectUser = async () => {
       .from("users")
       .select()
       .eq("id", sessionid.id);
+
    error
       ? error
       : window.localStorage.setItem("userData", JSON.stringify(data[0]));

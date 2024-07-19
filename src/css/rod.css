@@ -1,30 +1,30 @@
 .header-termos {
-  margin-bottom: 60px;
+   margin-bottom: 60px;
 }
 
 .header-termos div,
 .rod {
-  max-width: 1000px;
-  margin: 0 auto 20px auto;
-  padding: 0 20px;
+   max-width: 1000px;
+   margin: 0 auto 20px auto;
+   padding: 0 20px;
 }
 
 .rod p {
-  margin-bottom: 20px;
+   margin-bottom: 20px;
 }
 
 .header-termos span {
-  display: block;
-  text-align: start;
-  text-transform: uppercase;
-  font-size: 1.5rem;
-  letter-spacing: 1, 255px;
-  color: #ffdddd;
+   display: block;
+   text-align: start;
+   text-transform: uppercase;
+   font-size: 1.5rem;
+   letter-spacing: 1, 255px;
+   color: #ffdddd;
 }
 
 .header-termos h1 {
-  text-align: start;
-  font-size: 4rem;
-  color: #fff;
-  line-height: 1;
+   text-align: start;
+   font-size: clamp(2rem, 12vw, 4rem);
+   color: #fff;
+   line-height: 1;
 }

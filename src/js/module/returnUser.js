@@ -1,18 +1,28 @@
-export default function returnUser() {
+import { selectUser } from "../Acess/endPoints.js";
+
+export default async function returnUser() {
+   await selectUser();
    const user = JSON.parse(window.localStorage.getItem("userData"));
    if (user) {
       function selectElement(campo, valor) {
          const select = document.querySelector(campo);
-         select.value = valor;
-         select.setAttribute("disabled", "disabled");
+         const formCamp = document.querySelector(".form-ficha");
+         if (select) {
+            select.value = valor;
+            if (!formCamp.classList.contains("perfil")) {
+               select.setAttribute("disabled", "disabled");
+            }
+         }
       }
 
       function selectCampo(campo, valor) {
          const select = document.querySelector(campo);
-         select.innerHTML = valor;
+         if (select) {
+            select.innerText = valor;
+         }
       }
 
-      if (window.location.pathname === "/") {
+      if (window.location.pathname !== "/entrada.html") {
          selectCampo(".user-name", user["nome"]);
 
          selectElement(".dados-pessoais #nome", user["nome"]);
@@ -24,6 +34,7 @@ export default function returnUser() {
          selectElement(".dados-pessoais #email", user["email"]);
 
          selectCampo(".ficha-canvas .nome", user["nome"]);
+         selectCampo(".ficha-canvas .assinatura", user["nome"]);
          selectCampo(".ficha-canvas .cpf", user["cpf"]);
          selectCampo(".ficha-canvas .matricula", user["matricula"]);
          selectCampo(".ficha-canvas .turma", user["turma"]);

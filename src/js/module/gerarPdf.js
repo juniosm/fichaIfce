@@ -31,11 +31,12 @@ export default function GerarPdf() {
 
          let doc = new jsPDF("p", "px", "a4");
          doc.setProperties({
-            title: "SolicitaçãoIfceCrato.pdf"
+            title: "SolicitaçãoIfceCrato.pdf",
+            charSpace: 1
          }).html(formulario, {
             callback: function (doc) {
                // doc.addImage(imgData, "PNG", 20, 20, 160, 31);
-               doc.output("dataurlnewwindow", { filename: "FichaIfce.pdf" });
+               doc.output("dataurlnewwindow", { filename: "Ficha Ifce.pdf" });
                // doc.output("datauristring");
             },
             html2canvas: {

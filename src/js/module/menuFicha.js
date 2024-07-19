@@ -77,8 +77,8 @@ export default function MenuFicha(listElement, location) {
     <li>
       <label for="procesoSeletivo">Edital processo seletivo</label>
       <div>
-       <input type = "radio" name="modalidade"><label>IntegradoInterna</label>
-       <input type = "radio" name="modalidade"><label>SubsequenteInterna</label>
+       <input type = "radio" name="modalidade"><label>Integrado Interna</label>
+       <input type = "radio" name="modalidade"><label>Subsequente Interna</label>
       </div>
       <div>
         <input type="text" id="procesoSeletivo" name="procesoSeletivo" placeholder= "Curso:" />
