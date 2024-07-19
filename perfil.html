@@ -78,43 +78,50 @@
 
   <main class="mainPerfilUser home">
     <div class="content-page active">
-      <form class="form-ficha perfil">
+      <form class="form-ficha perfil" id="formEditPerfil">
         <h3 class="col-2"> Editar dados pessoais </h3>
-        <section class="dados-pessoais ">
+        <section class="dados-pessoais">
           <div>
             <label for="nome">Nome:</label>
-            <input type="text" id="nome">
+            <input type="text" id="nome" name="nome">
           </div>
           <div>
             <label for="cpf">CPF:</label>
-            <input type="text" id="cpf">
+            <input type="text" id="cpf" name="cpf">
           </div>
           <div>
             <label for="matricula">Matricula:</label>
-            <input type="text" id="matricula">
+            <input type="text" id="matricula" name="matricula">
           </div>
           <div>
             <label for="curso">Curso:</label>
-            <input type="text" id="curso">
+            <input type="text" id="curso" name="curso">
           </div>
           <div>
             <label for="turma">Turma:</label>
-            <input type="text" id="turma">
+            <input type="text" id="turma" name="turma">
           </div>
           <div>
             <label for="telefone">Telefone:</label>
-            <input type="text" id="telefone">
+            <input type="text" id="telefone" name="telefone">
           </div>
           <div class="col-2">
             <label for="email">Email:</label>
-            <input type="text" id="email">
+            <input type="text" id="email" name="email">
           </div>
-          <button type="button" id="editPerfil" class="button"><span>Editar</span></button>
+          <button style="grid-column: 2;" type="button" id="editPerfil" class="button"><span>Editar</span></button>
       </form>
     </div>
 
   </main>
 
+  <div class="modal">
+    <div class="wrapper-modal">
+      <h4>Deseja realmente alterar os dados cadastrados ?</h4>
+      <button class="button">Sim</button>
+      <button class="button">Não</button>
+    </div>
+  </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://smtpjs.com/v3/smtp.js"></script>

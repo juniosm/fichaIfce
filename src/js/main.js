@@ -7,6 +7,7 @@ import Login from "./module/login.js";
 import ReturnUser from "./module/returnUser.js";
 import ContentRequeriment from "./module/contentRequeriment.js";
 import Validate from "./module/validated.js";
+import EditPerfil from "./module/editPerfil.js";
 
 Validate();
 
@@ -42,3 +43,5 @@ const btnBack = document.querySelector(".btnBack");
 FlagContent(flagSetor, flagForm, btnsSetores, btnBack);
 
 ContentRequeriment();
+
+EditPerfil();

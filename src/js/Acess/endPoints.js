@@ -18,10 +18,10 @@ const singUp = async (login, password, datas) => {
          data: datas
       }
    });
-   if (error) {
-      erroMsg("Error", error);
-   } else {
+   if (!error) {
       window.location.href = window.location.origin + "/infoEmail.html";
+   } else {
+      erroMsg("Error", error);
    }
 };
 const singIn = async (login, password) => {
@@ -88,6 +88,19 @@ const selectUser = async () => {
       : window.localStorage.setItem("userData", JSON.stringify(data[0]));
 };
 
+const updateUser = async obj => {
+   let sessionid = (await getSession()).data.session.user;
+
+   const { data, error } = await supabase
+      .from("users")
+      .update(obj)
+      .eq("id", sessionid.id);
+
+   error
+      ? erroMsg("Error", error)
+      : erroMsg("Sucesso", "Dados alterado com sucesso");
+};
+
 export {
    singIn,
    singUp,
@@ -97,5 +110,6 @@ export {
    resetPasswordForEmail,
    getUser,
    getSession,
-   selectUser
+   selectUser,
+   updateUser
 };

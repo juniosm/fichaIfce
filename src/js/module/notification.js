@@ -12,6 +12,6 @@ export default function erroMsg(title, msg) {
 
       let notification = setTimeout(() => {
          $(".error-notification").remove();
-      }, 7000);
+      }, 8000);
    });
 }
