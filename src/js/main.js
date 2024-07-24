@@ -19,7 +19,7 @@ gerarPdf();
 
 const buttonMenuLeft = document.querySelector(".buttonMenuLeft svg");
 const tagMenuLeft = document.querySelector(".menu-left");
-const bodyContent = document.querySelector(".content-page");
+const bodyContent = document.querySelectorAll(".content-page");
 
 ActiveMenuLeft(buttonMenuLeft, tagMenuLeft, bodyContent);
 
@@ -36,11 +36,12 @@ const ilustracao = document.querySelector(".ilustracao");
 EffectEntrada(linkCadastro, linkLogin, ilustracao, formEntrada);
 
 const flagSetor = document.querySelector(".flag-setores");
+const contentUser = document.querySelector(".content-page.user");
 const flagForm = document.querySelector(".flag-form");
 const btnsSetores = document.querySelectorAll(".setores li");
 const btnBack = document.querySelector(".btnBack");
 
-FlagContent(flagSetor, flagForm, btnsSetores, btnBack);
+FlagContent(flagSetor, contentUser, flagForm, btnsSetores, btnBack);
 
 ContentRequeriment();
 

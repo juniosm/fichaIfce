@@ -133,8 +133,14 @@ export default function MenuFicha(listElement, location) {
 
       const MenuAtual = link => {
          MenuAtivo(link.target);
-
          ContentRequeriment();
+
+         window.scroll({
+            top: 500,
+            left: 0,
+            behavior: "smooth"
+         });
+
          if (link.target.href.includes("disciplina")) {
             location.innerHTML = disciplina;
             ContentRequeriment();

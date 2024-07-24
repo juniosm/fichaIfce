@@ -14,10 +14,10 @@
 </head>
 
 <body>
-  <nav class="menu-left active">
+  <nav class="menu-left ">
     <div>
       <div class="cor-header"> <span class="buttonMenuLeft"><label class="hamburger">
-            <input type="checkbox">
+            <input type="checkbox" checked>
             <svg viewBox="0 0 32 32">
               <path class="line line-top-bottom" d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 26 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"></path>
               <path class="line" d="M7 16 27 16"></path>
@@ -46,7 +46,7 @@
             <span>
               <svg xmlns="http://www.w3.org/2000/svg" width="7" height="10" viewBox="0 0 7 10" fill="none">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M1.989 3.58269L3.48074 0L4.97249 3.58269L4.98839 3.59197L4.97293 3.59919L4.13351 4.29159L3.65536 4.71504L5.47011 4.29581L5.90452 4.12675L6.96149 4.74375L4.97249 5.7887L3.48074 9.57041L2.14771 6.19104L3.97769 6.5018L1.32605 5.44041L0 4.74375L1.989 3.58269Z" fill="black" />
-              </svg><span class="text-mid">Visualizar</span>
+              </svg><span class="text-mid">Editar</span>
             </span>
             <svg xmlns="http://www.w3.org/2000/svg" width="147" height="64" viewBox="0 0 147 64" fill="none">
 
@@ -69,15 +69,16 @@
       </div>
     </div>
   </nav>
-  <header>
+  <header class="header-fixed">
     <div>
-      <span class="user-name"> Name</span>
-      <span class="off-user">sair</span>
+      <span class="off-user"><img src="./public/img/icons/logout.svg" alt="">sair</span>
     </div>
   </header>
   <main class="home">
-
-    <div class="content-page active">
+    <div class="content-page user">
+      <p>Bem-vindo, </p> <span class="user-name">Name</span>
+    </div>
+    <div class="content-page ">
       <div class="flag-setores">
         <h2>Escolha o setor </h2>
         <ul class="setores">
@@ -106,7 +107,8 @@
       </div>
       <div class="flag-form">
         <div class="header-content">
-          <h2>Ficha</h2>
+          <h2>Ficha </h2>
+          <span class="infoBtnRequerimento">Selecione o tipo de requerimento</span>
           <nav class="menu-ficha">
             <ul>
               <li><a href="#matriculaMenu">Matriculas</a></li>
@@ -155,8 +157,8 @@
 
             </section>
             <div class="flex buttons-fichas">
-              <button type="button" id="btnBack" class="button btnBack"><span>Voltar</span></button>
-              <button type="button" id="pdfView" class="button"><span>Enviar</span></button>
+              <button type="button" id="btnBack" class="button btnBack btnDenied"><span>Voltar</span></button>
+              <button type="button" id="pdfView" class="button btnConfirmed"><span>Enviar</span></button>
             </div>
           </form>
 
@@ -223,7 +225,7 @@
             <input type="file" id="fileAdd" name="fileAdd" accept="application/pdf, .doc,.docx" />
           </li>
         </ul>
-        <button type="button" id="buttonPdf" class="button" data-html2canvas-ignore><span>Enviar</span></button>
+        <button type="button" id="buttonPdf" class="button " data-html2canvas-ignore><span>Enviar</span></button>
 
       </div>
 

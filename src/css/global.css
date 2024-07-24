@@ -34,8 +34,14 @@ img {
 header {
    background-color: #32a041;
    padding: 20px;
-   margin-bottom: 20px;
-   text-align: end;
+}
+
+.header-fixed {
+   display: flex;
+   justify-content: end;
+   width: calc(100% - 35px);
+   position: fixed;
+   z-index: 10;
 }
 
 ul li a {
@@ -44,6 +50,10 @@ ul li a {
 
 input {
    margin: 0;
+}
+
+.home {
+   padding: 90px 30px 20px 30px;
 }
 
 .button {
@@ -65,7 +75,7 @@ input {
 }
 
 .button:hover::before {
-   transform: scaleX(1.1);
+   transform: scaleX(1.15);
 }
 
 .button span {
@@ -87,7 +97,92 @@ input {
    transform-origin: 0 50%;
 }
 
+.btnDenied {
+   background: transparent;
+   border: 2px solid #32a041;
+   color: #32a041;
+}
+
+.btnDenied:hover span {
+   color: #ffffff;
+}
+
+.btnConfirmed {
+   min-width: 180px;
+}
+
 .off-user {
-   font-weight: 600;
+   display: flex;
+   gap: 5px;
+   align-items: center;
+   font-weight: 500;
    cursor: pointer;
+   color: #000000;
+}
+
+.off-user:hover {
+   color: #ffffff;
+}
+
+.off-user:hover img {
+   filter: invert(100%);
+   scale: 1.2;
+}
+
+.btnEdit {
+   margin-top: 20px;
+   grid-column: 2;
+}
+
+.modal {
+   background: #00000070;
+   position: fixed;
+   width: 100%;
+   height: 100%;
+   z-index: 200;
+   top: 0;
+   display: none;
+   align-items: center;
+   justify-content: center;
+}
+
+.modal.active {
+   display: flex;
+}
+
+.wrapper-modal {
+   margin: 20px;
+   width: 600px;
+   padding: 20px 40px;
+   border-radius: 20px;
+   background: #ffffff;
+}
+
+.wrapper-modal h4 {
+   font-weight: 600;
+   font-size: clamp(1rem, 5vw, 1.4rem);
+   margin-bottom: 40px;
+}
+
+.wrapper-modal .btnConfirmed,
+.wrapper-modal .btnDenied {
+   min-width: 100%;
+   margin-bottom: 16px;
+}
+
+@media (max-width: 750px) {
+   .btnEdit {
+      grid-column: 1;
+   }
+}
+
+@media (max-width: 500px) {
+   .home {
+      padding: 90px 15px 10px 15px;
+   }
+
+   .button {
+      margin-bottom: 8px;
+      width: 100%;
+   }
 }

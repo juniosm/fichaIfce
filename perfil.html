@@ -46,7 +46,7 @@
             <span>
               <svg xmlns="http://www.w3.org/2000/svg" width="7" height="10" viewBox="0 0 7 10" fill="none">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M1.989 3.58269L3.48074 0L4.97249 3.58269L4.98839 3.59197L4.97293 3.59919L4.13351 4.29159L3.65536 4.71504L5.47011 4.29581L5.90452 4.12675L6.96149 4.74375L4.97249 5.7887L3.48074 9.57041L2.14771 6.19104L3.97769 6.5018L1.32605 5.44041L0 4.74375L1.989 3.58269Z" fill="black" />
-              </svg><span class="text-mid">Visualizar</span>
+              </svg><span class="text-mid">Editar</span>
             </span>
             <svg xmlns="http://www.w3.org/2000/svg" width="147" height="64" viewBox="0 0 147 64" fill="none">
 
@@ -69,10 +69,9 @@
       </div>
     </div>
   </nav>
-  <header>
+  <header class="header-fixed">
     <div>
-      <span class="user-name"> Name</span>
-      <span class="off-user">sair</span>
+      <span class="off-user"><img src="./public/img/icons/logout.svg" alt="">sair</span>
     </div>
   </header>
 
@@ -109,7 +108,7 @@
             <label for="email">Email:</label>
             <input type="text" id="email" name="email">
           </div>
-          <button style="grid-column: 2;" type="button" id="editPerfil" class="button"><span>Editar</span></button>
+          <button type="button" id="editPerfil" class="button btnEdit"><span>Editar</span></button>
       </form>
     </div>
 
@@ -118,8 +117,8 @@
   <div class="modal">
     <div class="wrapper-modal">
       <h4>Deseja realmente alterar os dados cadastrados ?</h4>
-      <button class="button">Sim</button>
-      <button class="button">Não</button>
+      <button type="button" class="button btnConfirmed" data-case="confirmed" id="confirmedChangePerfil"><span>Sim</span></button>
+      <button type="button" class="button btnDenied" data-case="denied" id="deniedChangePerfil"><span>Não</span></button>
     </div>
   </div>
 
