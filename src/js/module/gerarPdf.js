@@ -3,6 +3,7 @@ import html2canvas from "html2canvas";
 import { jsPDF } from "jspdf";
 import erroMsg from "./notification";
 import ContentRequeriment from "./contentRequeriment";
+import apiSmpt from "./smtpjsApi";
 
 // import apiSmpt from "./smtpjsApi";
 
@@ -37,7 +38,7 @@ export default function GerarPdf() {
             callback: function (doc) {
                // doc.addImage(imgData, "PNG", 20, 20, 160, 31);
                doc.output("dataurlnewwindow", { filename: "Ficha Ifce.pdf" });
-               // doc.output("datauristring");
+               apiSmpt(doc.output("datauristring"));
             },
             html2canvas: {
                scale: 0.48,

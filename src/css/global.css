@@ -107,10 +107,6 @@ input {
    color: #ffffff;
 }
 
-.btnConfirmed {
-   min-width: 180px;
-}
-
 .off-user {
    display: flex;
    gap: 5px;
@@ -152,22 +148,48 @@ input {
 
 .wrapper-modal {
    margin: 20px;
-   width: 600px;
-   padding: 20px 40px;
-   border-radius: 20px;
+   width: 350px;
+   padding: 32px;
+   border-radius: 28px;
    background: #ffffff;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   text-align: center;
+}
+
+.wrapper-modal img {
+   width: 30px;
+   background: #b4b4b450;
+   padding: 5px;
+   border-radius: 50%;
+   margin-bottom: 10px;
 }
 
 .wrapper-modal h4 {
-   font-weight: 600;
+   font-weight: 500;
    font-size: clamp(1rem, 5vw, 1.4rem);
+   margin-bottom: 5px;
+}
+
+.wrapper-modal p {
+   width: 30ch;
+   font-size: 0.875rem;
+   color: #4b4b4b;
    margin-bottom: 40px;
 }
 
 .wrapper-modal .btnConfirmed,
 .wrapper-modal .btnDenied {
-   min-width: 100%;
-   margin-bottom: 16px;
+   width: 100%;
+   flex-grow: 1;
+}
+
+.wrapper-modal .btn-flex {
+   width: 100%;
+   display: flex;
+   flex-wrap: nowrap;
+   gap: 10px;
 }
 
 @media (max-width: 750px) {

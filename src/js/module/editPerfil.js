@@ -21,7 +21,8 @@ export default function EditPerfil() {
          modal.classList.add("active");
          caseButtons.forEach(element => {
             element.addEventListener("click", ({ target }) => {
-               if (target.dataset.case === "denied") {
+               console.log(target.dataset.case);
+               if (`${target.dataset.case}` === "denied") {
                   erroMsg("Cancelado", "Cancelado alteração do usuário");
                   modal.classList.remove("active");
                } else {

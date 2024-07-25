@@ -137,6 +137,10 @@
    background: transparent;
 }
 
+.form-ficha .btnConfirmed {
+   min-width: 180px;
+}
+
 .ficha-canvas {
    align-items: start;
    display: none;

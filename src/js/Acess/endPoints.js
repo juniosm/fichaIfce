@@ -2,8 +2,7 @@ import { createClient } from "@supabase/supabase-js";
 import erroMsg from "../module/notification.js";
 
 export const supaBaseUrl = "gnbhqvrfvojoptozlsre";
-const supaBaseKey =
-   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImduYmhxdnJmdm9qb3B0b3psc3JlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTMyMTI1MTAsImV4cCI6MjAyODc4ODUxMH0.LuY8QU1usCh2JIRWv0RBU1xNnU4DmidHU1B3koixdRo";
+const supaBaseKey = import.meta.env.VITE_SUPABASE_KEY;
 
 const supabase = createClient(
    `https://${supaBaseUrl}.supabase.co`,
